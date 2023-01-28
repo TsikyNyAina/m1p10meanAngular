@@ -10,8 +10,7 @@ export class ClientComponent implements OnInit {
   clientId="63d509650c4fa470b8443fcd";
 
   constructor(private clientService:ClientService) { 
-    this.clientService.getClientById(this.clientId). subscribe(console.log)
-
+    // this.clientService.getClientById(this.clientId). subscribe(console.log) 
 
   }
 

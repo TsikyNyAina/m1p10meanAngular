@@ -1,1 +1,17 @@
-<p>voiture works!</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>MARQUE</th>
+            <th>MODEL</th>
+            <th>NUMERO</th>
+        </tr>
+    </thead>
+    <tBody>
+        <tr *ngFor="let v of voiture">
+            <td>{{v.modelVoiture.marqueVoiture.marqueName}}</td>
+            <td>{{v.modelVoiture.modelName}}</td>
+            <td>{{v.numero}}</td>
+            <td>{{v.id}}</td>
+        </tr>
+    </tBody>
+</table>

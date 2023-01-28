@@ -13,6 +13,21 @@ export class ClientService {
   getClientById(clientId:string){
     return this.http.get(`${API_URL}/clientController/${clientId}`)
   }
+  getVoitureByClientId(clientId:string){
+    const param=[
+      {
+        $addFields: {
+          clientId: { $toString: "$clientId" }
+        }
+      },
+      {
+        $match:{
+          clientId:clientId
+        }
+      }
+    ]
+    return this.http.get(`${API_URL}/voiture/option/${JSON.stringify(param)}`)
+  }
   
 
 
