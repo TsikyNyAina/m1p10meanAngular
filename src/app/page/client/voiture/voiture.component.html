@@ -11,7 +11,7 @@
             <td>{{v.modelVoiture.marqueVoiture.marqueName}}</td>
             <td>{{v.modelVoiture.modelName}}</td>
             <td>{{v.numero}}</td>
-            <td>{{v.id}}</td>
+            <td [routerLink]="[v.id]">{{v.id}}</td>
         </tr>
     </tBody>
 </table>

@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ClientComponent } from './client.component';
 import { HistoriqueComponent } from './historique/historique.component';
 import { ProfilComponent } from './profil/profil.component';
+import { DetailReparationComponent } from './reparation/detail-reparation/detail-reparation.component';
+import { ReparationSaveComponent } from './reparation/reparation-save/reparation-save.component';
 import { ReparationComponent } from './reparation/reparation.component';
 import { VoitureComponent } from './voiture/voiture.component';
 
@@ -15,6 +17,8 @@ const routes: Routes = [
       {path:"voiture",component:VoitureComponent},
       {path:"historique",component:HistoriqueComponent},
       {path:"reparation",component:ReparationComponent},
+      {path:"reparation/:id/detail",component:DetailReparationComponent},
+      {path:"reparation/save",component:ReparationSaveComponent}
     ]
   }
 ];

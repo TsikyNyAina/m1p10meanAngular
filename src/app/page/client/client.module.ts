@@ -7,6 +7,8 @@ import { VoitureComponent } from './voiture/voiture.component';
 import { HistoriqueComponent } from './historique/historique.component';
 import { ReparationComponent } from './reparation/reparation.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { DetailReparationComponent } from './reparation/detail-reparation/detail-reparation.component';
+import { ReparationSaveComponent } from './reparation/reparation-save/reparation-save.component';
 
 
 
@@ -17,6 +19,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
     VoitureComponent,
     HistoriqueComponent,
     ReparationComponent,
+    DetailReparationComponent,
+    ReparationSaveComponent,
   ],
   imports: [
     CommonModule,

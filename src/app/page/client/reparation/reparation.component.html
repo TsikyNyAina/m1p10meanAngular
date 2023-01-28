@@ -1,1 +1,26 @@
-<p>reparation works!</p>
+<h3>REPARATION</h3>
+<table class="table">
+    <thead>
+        <tr> 
+            <th>VOITURE</th>
+            <th>START DATE</th>
+            <th>END DATE</th>
+            <th>AVANCEMENT</th> 
+            <th>COST</th> 
+            <th>DESCRIPTION</th> 
+            <th>STATUS</th> 
+        </tr>
+    </thead>
+    <tBody>
+        <tr *ngFor="let r of reparation">
+            <td>{{r.voiture.numero}}</td>
+            <td>{{r.startDate}}</td>
+            <td>{{r.endDate}}</td>
+            <td>{{r.avancement}}</td>
+            <td>{{r.cost}}</td>
+            <td>{{r.description}}</td>
+            <td>{{r.status}}</td>
+            <td [routerLink]="[r.id,'detail']">DETAIL</td>
+        </tr>
+    </tBody>
+</table>

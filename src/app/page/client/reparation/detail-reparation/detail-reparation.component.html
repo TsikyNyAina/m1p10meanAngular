@@ -1,0 +1,19 @@
+<h3>DETAIL REPARATION</h3>
+<table class="table">
+    <thead>
+        <tr> 
+            <th>PIECE</th>  
+            <th>ETAT</th>
+            <th>QUANTITY</th> 
+            <th>COST</th>
+        </tr>
+    </thead>
+    <tBody>
+        <tr *ngFor="let r of detailReparation">
+            <td>{{r.marquePiece.marquePieceName}}</td>
+            <td>{{r.etat}}</td>
+            <td>{{r.quantity}}</td>
+            <td>{{r.cost}}</td>
+        </tr>
+    </tBody>
+</table>
