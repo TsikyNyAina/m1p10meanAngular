@@ -6,8 +6,7 @@ import { PageModule } from '../page/page.module';
 import { ComponentModule } from '../component/component.module';
 import { DirectiveModule } from '../directive/directive.module';
 import { PipeModule } from '../pipe/pipe.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { StarRatingModule } from 'angular-star-rating';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
 
 @NgModule({
   declarations: [],
