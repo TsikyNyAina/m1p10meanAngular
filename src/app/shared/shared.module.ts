@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { DirectiveModule } from '../directive/directive.module';
 import { PipeModule } from '../pipe/pipe.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';  
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { NzZorroModule } from './nzZorro.module';
 
 @NgModule({
@@ -13,10 +12,9 @@ import { NzZorroModule } from './nzZorro.module';
     CommonModule,
     HttpClientModule, 
     DirectiveModule,
-    PipeModule, 
+    PipeModule,
     FormsModule,
-    ReactiveFormsModule,  
-    BrowserAnimationsModule, 
+    ReactiveFormsModule,
     NzZorroModule,
   ],
   exports:[
@@ -25,8 +23,7 @@ import { NzZorroModule } from './nzZorro.module';
     DirectiveModule,
     PipeModule, 
     FormsModule,
-    ReactiveFormsModule,  
-    BrowserAnimationsModule,
+    ReactiveFormsModule,
     NzZorroModule, 
   ]
 })

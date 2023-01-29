@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ResponsableService } from '../../service/responsable.service';
 import { Router } from '@angular/router';
+import { Responsable } from 'src/app/entity';
 
 @Component({
   selector: 'app-responsable',
@@ -13,19 +14,18 @@ export class ResponsableComponent implements OnInit {
   constructor(private responsableService : ResponsableService, private route: Router) { }
 
   title = 'responsableGarage';
-  email: string = "";
-  mdp: any = "";
+  responsable = new Responsable();
   show: boolean = false;
   
-
   ngOnInit(): void {
   }
 
   submit(){
-    this.responsableService.getResponable(this.email, this.mdp).subscribe((data: any) => {
+    this.responsableService.getResponable(this.responsable.email, this.responsable.mdp).subscribe((data: any) => {
+      console.log(data);
       if (Array.isArray(data) && data[0]) {
         console.log(data[0].id);
-        this.route.navigate(['/stat']);
+        this.route.navigate(['/voiture']);
       } else {
         this.show = true;
       }
