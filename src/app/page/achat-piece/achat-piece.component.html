@@ -2,9 +2,9 @@
 <nz-table #middleTable nzBordered nzSize="middle" [nzData]="achatPiece" [nzScroll]="{ x: '1150px', y: '100%' }" nzBordered    >
     <thead>
       <tr>
-        <th [nzWidth]="'200px'">VOITURE</th>   
-        <th [nzWidth]="'200px'">START DATE</th>  
-        <th [nzWidth]="'200px'">END DATE</th>  
+        <th [nzWidth]="'200px'">Id</th>   
+        <th [nzWidth]="'200px'">Piece</th>  
+        <th [nzWidth]="'200px'">prixUnitaire</th>  
         <th [nzWidth]="'200px'">AVANCEMENT</th>  
         <th [nzWidth]="'200px'">COST</th>  
         <th [nzWidth]="'200px'">DESCRIPTION</th>  
@@ -19,7 +19,7 @@
         <td>{{ data.prixUnitaire }}</td> 
         <td>{{ data.quantity }}</td> 
         <td>{{ data.prixUnitaire*data.quantity }}</td> 
-        <td>{{ data.dateAchatPiece }}</td>  
+        <td>{{ data.dateAchat }}</td>  
         <td [nzRight]="true">
             <i class="mx-2 bi bi-trash-fill"></i> 
             <i class="mx-2 bi bi-pencil-fill"></i>

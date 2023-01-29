@@ -19,6 +19,8 @@ import { ActiveModule } from 'projects/active/src/src';
 import { ComponentModule } from '../component/component.module';
 import { AchatPieceComponent } from './achat-piece/achat-piece.component';
 import { AchatPieceSaveComponent } from './achat-piece-save/achat-piece-save.component';
+import { LoyerComponent } from './loyer/loyer.component';
+import { LoyerSaveComponent } from './loyer-save/loyer-save.component';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { AchatPieceSaveComponent } from './achat-piece-save/achat-piece-save.com
     LoginClientComponent,
     SignupClientComponent,
     AchatPieceComponent,
-    AchatPieceSaveComponent
+    AchatPieceSaveComponent,
+    LoyerComponent,
+    LoyerSaveComponent
   ],
   imports: [
     CommonModule,

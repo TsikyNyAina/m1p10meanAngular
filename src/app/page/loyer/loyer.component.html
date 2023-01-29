@@ -1,0 +1,30 @@
+<h3>SAVE AN Voiture</h3>
+<div   class="row">
+    <div  class="col" [form]="loyer"> 
+        <div class="row" id="0"></div>
+
+    </div>
+    <div class="row my-3">
+        <div class="col text-end">
+            <button (click)="submit()" class="btn btn-primary">save</button>
+        </div>
+    </div>
+</div>
+
+Loyer Liste
+<nz-table #middleTable nzBordered nzSize="middle" [nzData]="listeLoyer" [nzScroll]="{x:'100%',y:'100%'}" nzBordered nzSize="middle"  class="h-100" nzNoResult="hahahaaha">
+    <thead>
+      <tr>
+        <th [nzWidth]="'200px'">Date payement</th>   
+        <th [nzWidth]="'200px'">Montant</th>  
+        <th [nzWidth]="'200px'">Mois</th>  
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of middleTable.data"> 
+        <td>{{data.datePayement}}</td>
+            <td>{{data.montant}}</td>
+            <td>{{data.mois}}</td>
+      </tr>
+    </tbody>
+  </nz-table>
