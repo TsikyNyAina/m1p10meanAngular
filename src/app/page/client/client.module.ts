@@ -9,8 +9,9 @@ import { ReparationComponent } from './reparation/reparation.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { DetailReparationComponent } from './reparation/detail-reparation/detail-reparation.component';
 import { ReparationSaveComponent } from './reparation/reparation-save/reparation-save.component';
-
-
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,10 @@ import { ReparationSaveComponent } from './reparation/reparation-save/reparation
   imports: [
     CommonModule,
     ClientRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule
   ],
   exports:[
     ClientComponent,

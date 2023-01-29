@@ -13,6 +13,12 @@ export class ClientService {
   getClientById(clientId:string){
     return this.http.get(`${API_URL}/clientController/${clientId}`)
   }
+
+  getClient(mail:string,tmdp:string){
+    let match = [{$match:{email:mail,mdp:tmdp}}];
+    return this.http.get(`${API_URL}/clientController/option/${JSON.stringify(match)}`)
+  }
+
   getVoitureByClientId(clientId:string){
     const param=[
       {
