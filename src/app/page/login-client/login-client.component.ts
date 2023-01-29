@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientService } from '../../service';
 import { Router } from '@angular/router';
+import { Client } from 'src/app/entity';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-login-client',
@@ -10,8 +12,7 @@ import { Router } from '@angular/router';
 })
 export class LoginClientComponent implements OnInit {
 
-  email: string = "";
-  mdp: any = "";
+  client = new Client();
   show: boolean = false;
 
   constructor(private clientService: ClientService, private route: Router) { }
@@ -20,7 +21,7 @@ export class LoginClientComponent implements OnInit {
   }
 
   submit() {
-    this.clientService.getClient(this.email, this.mdp).subscribe(data => {
+    this.clientService.getClient(this.client.email, this.client.mdp).subscribe(data => {
       if (Array.isArray(data) && data[0]) {
         console.log(data);
         this.route.navigate(['/voiture']);

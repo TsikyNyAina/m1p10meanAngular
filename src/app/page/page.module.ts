@@ -32,7 +32,7 @@ import { ComponentModule } from '../component/component.module';
     MarquePieceComponent,
     ListeClientComponent,
     LoginClientComponent,
-    SignupClientComponent, 
+    SignupClientComponent
   ],
   imports: [
     CommonModule,

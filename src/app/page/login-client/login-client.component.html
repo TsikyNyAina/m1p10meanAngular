@@ -1,13 +1,17 @@
 <div>
     <h5><u><i>Login Client</i></u></h5>
-    <form class="example-form">
-      <label>Email</label>
-      <input placeholder="Entrez votre email" name="email" [(ngModel)]="email">
-
-      <label>Password</label>
-      <input placeholder="Enter your password" value="" name="mdp" type="password" [(ngModel)]="mdp">
-      <button color="primary" (click)="submit()">Submit</button>
-      <span *ngIf="show"> Login ou mot de passe eronée</span>
-    </form>
+    <div>
+      <form class="example-form">
+        <label>Email</label>
+        <input placeholder="Entrez votre email" name="email" [(ngModel)]="client.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        <div *ngIf="!client.isValidMail()" class="alert alert-danger">
+            Email is not valid.
+        </div>
+        <label>Password</label>
+        <input placeholder="Enter your password" value="" name="mdp" type="password" [(ngModel)]="client.mdp" required>
+        <button color="primary" [disabled]="!client.isValid1()" (click)="submit()">Submit</button>
+        <span *ngIf="show"> Login ou mot de passe eronée</span>
+      </form>
+    </div>
     <a [routerLink]="['/signupClient']">Inscription </a>
-  </div>
+  </div>    
