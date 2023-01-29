@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { getItem } from 'projects/active/src/lib/utils';
 import { MarquePiece, ModelVoiture } from 'src/app/entity';
 
 @Component({
@@ -8,7 +9,9 @@ import { MarquePiece, ModelVoiture } from 'src/app/entity';
 })
 export class MarquePieceComponent{
 
-  constructor() { }
+  constructor() {
+    getItem(this.marquePiece).modelVoiture.hide=true
+   }
   marquePiece=new MarquePiece()
   modelVoiture=new Array<ModelVoiture>()
   addModel(){

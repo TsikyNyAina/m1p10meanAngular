@@ -6,7 +6,7 @@ export class ModelVoiture{
     id:string;
     marqueVoitureId:string;
     @form({
-        placeholder:"Nom de la marque",
+        placeholder:"Nom du model",
         component:TextComponent,
         validator:Validators.required
     })
