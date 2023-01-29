@@ -1,1 +1,11 @@
 <p>profil works!</p>
+<h5><u><i>Login Form For client</i></u></h5>
+<form class="example-form">
+    <label>Email</label>
+    <input placeholder="Entrez votre email" name="email" [(ngModel)]="email">
+
+    <label>Password</label>
+    <input placeholder="Enter your password" value="" name="mdp" type="password" [(ngModel)]="mdp">
+  <button color="primary" (click)="submit()">Submit</button>
+  <span *ngIf="show"> Login ou mot de passe eronée</span>
+</form>

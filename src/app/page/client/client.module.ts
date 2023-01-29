@@ -26,7 +26,8 @@ import { ActiveModule } from 'projects/active/src/src';
   imports: [
     CommonModule,
     ClientRoutingModule,
-    ActiveModule
+    ActiveModule,
+    SharedModule
   ],
   exports:[
     ClientComponent,
