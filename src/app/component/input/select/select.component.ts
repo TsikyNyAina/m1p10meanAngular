@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, NgControl } from '@angular/forms';
-import { Data } from 'projects/active/src/lib/type';
+import { FormControl } from '@angular/forms';
+import { Data, Item } from 'projects/active/src/lib/type';
 
 @Component({
-  selector: 'app-text',
-  templateUrl: './text.component.html',
-  styleUrls: ['./text.component.scss']
+  selector: 'app-select',
+  templateUrl: './select.component.html',
+  styleUrls: ['./select.component.scss']
 })
-export class TextComponent {
+export class SelectComponent   {
+  item:Item;
   #value:any="hahaha";
   set value(value:any){  
       this.#value=value;
@@ -28,9 +29,9 @@ export class TextComponent {
   get formControl(){
     return this.#formControl
   }
-  constructor(data:Data) { 
-    
+  constructor(item:Data) { 
+    this.item=item as any 
     
   } 
-   
+
 }

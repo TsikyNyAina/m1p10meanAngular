@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
-import { TextComponent } from './component/input/text/text.component';
+import { Component } from '@angular/core'; 
+import { getItem } from 'projects/active/src/lib/utils';
+import { Client } from './entity/Client';
 
 @Component({
   selector: 'app-root',
@@ -9,16 +9,14 @@ import { TextComponent } from './component/input/text/text.component';
 })
 export class AppComponent {
   title = 'garage';
-  item={
-    component:TextComponent,
-    label:"jajaja",
-    data:2222
+  client=new Client()
+  client2=new Client()
+   
+  constructor(){  
+    
+  
   } 
-  form=new FormBuilder().group({
-    name:[2,Validators.required]
-  })
-  constructor(){ 
-    // this.form.valueChanges.subscribe(console.log)
-
-  } 
+  show(){
+    
+  }
 }

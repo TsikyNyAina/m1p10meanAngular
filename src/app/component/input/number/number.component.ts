@@ -3,12 +3,12 @@ import { FormControl, NgControl } from '@angular/forms';
 import { Data } from 'projects/active/src/lib/type';
 
 @Component({
-  selector: 'app-text',
-  templateUrl: './text.component.html',
-  styleUrls: ['./text.component.scss']
+  selector: 'app-number',
+  templateUrl: './number.component.html',
+  styleUrls: ['./number.component.scss']
 })
-export class TextComponent {
-  #value:any="hahaha";
+export class NumberComponent {
+  #value:any=0;
   set value(value:any){  
       this.#value=value;
       if(this.formControl?.value!=value){

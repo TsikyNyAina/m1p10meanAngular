@@ -30,6 +30,7 @@ import { ActiveModule } from 'projects/active/src/src';
     SharedModule
   ],
   exports:[
+    CommonModule,
     ClientComponent,
     ProfilComponent,
     VoitureComponent,

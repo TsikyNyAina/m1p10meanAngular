@@ -1,7 +1,7 @@
 <ng-template [ngIf]="!item?.hide" >
-    <div class="row" >
+    <div class="row" [var]="formControl.errors | firstKey"  #error="var">
         <div class="col"> 
-            <b>{{item.label || control?.name}}</b> 
+            <b>{{item.label  }}</b> 
         </div>
     </div>
     <div class="row" >
@@ -13,7 +13,7 @@
     </div>
     <div class="row">
         <div class="col text-end text-danger">
-            error message
+            {{error.var}}
         </div>
     </div>
 </ng-template> 

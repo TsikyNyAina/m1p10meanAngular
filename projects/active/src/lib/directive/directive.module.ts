@@ -1,21 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormDirective } from './form.directive';
-import { ControlDirective } from './control.directive';
+import { IdentifiantDirective } from './identifiant.directive';
+import { VarDirective } from './var.directive';
 
 
 
 @NgModule({
   declarations: [
     FormDirective,
-    ControlDirective
+    IdentifiantDirective,
+    VarDirective
   ],
   imports: [
     CommonModule
   ],
   exports:[
     FormDirective,
-    ControlDirective
+    IdentifiantDirective,
+    VarDirective
   ]
 })
 export class DirectiveModule { }

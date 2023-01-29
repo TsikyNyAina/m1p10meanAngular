@@ -1,1 +1,65 @@
 <h3>SAVE AN REPARATION</h3>
+<div   class="row">
+    <div  class="col" [form]="reparation"> 
+        <div class="row" id="0"></div>
+    </div>
+</div>
+
+
+
+
+<div   class="row my-5" >
+    <div class="col">
+        Detail Reparation
+    </div>
+    <!-- <div  class="col-md-12" > 
+        <div class="row my-3" >
+            <div class="col-md-3" id="0"></div>
+            <div class="col-md-3" id="1"></div>
+            <div class="col-md-3" id="2"></div> 
+            <div class="col-md-3" id="3"></div>  
+        </div>
+        <hr>
+    </div> -->
+    <table class="col-md-12 table">
+        <thead>
+            <tr>
+                <th class="col-md-3">Piece</th>
+                <th class="col-md-3">Etat</th>
+                <th class="col-md-2">Quantity</th>
+                <th class="col-md-2">Prix</th>
+                <th class="col-md-2"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr [form]="d" *ngFor="let d of detailReparation">
+                <td id="0"></td>
+                <td id="1"></td>
+                <td id="2"></td>
+                <td id="3"></td>
+                <td > delete</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+
+
+    <div class="col my-3">
+        <div class="row text-end">
+            <div class="col">
+                <button (click)="addDetail()" class="btn btn-primary">Add Detail</button> 
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="row my-3">
+    <div class="col text-end">
+        <button (click)="submit()" class="btn btn-primary">show</button>
+    </div>
+</div>
