@@ -1,6 +1,7 @@
-import { InlineFormComponent } from "projects/active/src/lib/component/inline-form/inline-form.component";
+import { InlineFormComponent } from "projects/active/src/lib/component/inline-form/inline-form.component"; 
 import { form } from "projects/active/src/lib/utils";
 import { NumberComponent, SelectComponent, StarComponent, TextComponent } from "../component/input";
+import { DateComponent } from "../component/input/date/date.component";
 
 export class Reparation{
     id:string;
@@ -33,5 +34,18 @@ export class Reparation{
         component:TextComponent,
         class:"my-2"
     })
-    description:string="hahahah";
+    description:string ;
+
+    @form({
+        label:"EtartDate",
+        component:DateComponent,
+        class:"my-2"
+    })
+    startDate:Date;
+    @form({
+        label:"End Date",
+        component:DateComponent,
+        class:"my-2"
+    })
+    endDate:Date;
 }

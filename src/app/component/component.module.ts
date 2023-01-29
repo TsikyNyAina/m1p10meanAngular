@@ -9,23 +9,24 @@ import { StarComponent } from './input/star/star.component';
 import { SharedModule } from '../shared/shared.module';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+import { SwitchComponent } from './input/switch/switch.component';
+import { DateComponent } from './input/date/date.component';
 @NgModule({
   declarations: [
     TextComponent,
     SelectComponent,
     NumberComponent,
-    StarComponent
+    StarComponent,
+    SwitchComponent,
+    DateComponent
   ],
   imports: [
     CommonModule,
     ActiveModule,
-    FormsModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
-    NzButtonModule,
+    SharedModule
   ],
-  exports:[
-    BrowserAnimationsModule,
+  exports:[ 
     CommonModule,
     TextComponent,
     NumberComponent,

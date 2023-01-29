@@ -2,6 +2,7 @@ import { Validators } from "@angular/forms";
 import { form } from "projects/active/src/lib/utils";
 import { TextComponent } from "../component/input";
 import { SelectComponent } from "../component/input";
+import { SwitchComponent } from "../component/input";
 import { ModelVoiture } from "./ModelVoiture";
 
 export class MarquePiece{
@@ -15,7 +16,7 @@ export class MarquePiece{
 
     @form({
         label:"Pour tous model de voiture",
-        component:TextComponent
+        component:SwitchComponent
     })
     touteModelVoiture:boolean ;
 

@@ -1,5 +1,8 @@
-<select class="row w-100 m-0 py-2 form-control" [(ngModel)]="value">
-    <option class="form-control" [ngValue]="item.value(d)" *ngFor="let d of item.data||[]">{{item.key(d)}}</option>
-</select>
+<!-- <select class="row w-100 m-0 py-2 form-control" [(ngModel)]="value">
+    <option class="form-control" [ngValue]="" *ngFor="let d of item.data||[]">{{}}</option>
+</select> -->
 
 
+<nz-select class="w-100 " nzSize="large" nzShowSearch nzAllowClear [nzPlaceHolder]="item.placeholder" [(ngModel)]="value">
+    <nz-option [nzLabel]="item.key(d)" [nzValue]="item.value(d)" *ngFor="let d of item.data||[]"></nz-option> 
+</nz-select>

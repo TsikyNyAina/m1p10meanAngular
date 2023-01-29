@@ -1,31 +1,32 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-import { ActiveModule } from 'projects/active/src/src';  
+import { HttpClientModule } from '@angular/common/http'; 
 import { DirectiveModule } from '../directive/directive.module';
 import { PipeModule } from '../pipe/pipe.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
-import { NzRateModule } from 'ng-zorro-antd/rate';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';  
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { NzZorroModule } from './nzZorro.module';
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    HttpClientModule,
-    ActiveModule, 
+    HttpClientModule, 
     DirectiveModule,
     PipeModule, 
     FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule,  
+    BrowserAnimationsModule, 
+    NzZorroModule
   ],
   exports:[
     CommonModule,
-    HttpClientModule,
-    ActiveModule, 
+    HttpClientModule, 
     DirectiveModule,
-    PipeModule,
+    PipeModule, 
     FormsModule,
-    ReactiveFormsModule,
-    NzRateModule
+    ReactiveFormsModule,  
+    BrowserAnimationsModule,
+    NzZorroModule
   ]
 })
 export class SharedModule { }
