@@ -20,7 +20,9 @@ import { ComponentModule } from '../component/component.module';
 import { AchatPieceComponent } from './achat-piece/achat-piece.component';
 import { AchatPieceSaveComponent } from './achat-piece-save/achat-piece-save.component';
 import { LoyerComponent } from './loyer/loyer.component';
-import { LoyerSaveComponent } from './loyer-save/loyer-save.component';
+// import { LoyerSaveComponent } from './loyer-save/loyer-save.component';
+import { SalaireComponent } from './salaire/salaire.component'; 
+import { SalaireSaveComponent } from './salaire-save/salaire-save.component';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import { LoyerSaveComponent } from './loyer-save/loyer-save.component';
     AchatPieceComponent,
     AchatPieceSaveComponent,
     LoyerComponent,
-    LoyerSaveComponent
+    // LoyerSaveComponent,
+    SalaireComponent,
+    SalaireSaveComponent
   ],
   imports: [
     CommonModule,
@@ -59,7 +63,9 @@ import { LoyerSaveComponent } from './loyer-save/loyer-save.component';
     ReparationSaveComponent, 
     ClientModule,
     ResponsableModule,
-    AchatPieceComponent
+    AchatPieceComponent,
+    SalaireComponent,
+    SalaireSaveComponent
   ]
 })
 export class PageModule { }

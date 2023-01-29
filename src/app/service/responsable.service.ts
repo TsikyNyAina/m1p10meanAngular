@@ -20,5 +20,8 @@ export class ResponsableService {
   getMarqueVoiture(){
     return this.http.get(`${API_URL}/marqueVoiture/option/[]`);
   }
+  getAllResponable(pipeline=new Array()){
+    return this.http.get(`${API_URL}/responsable/option/${JSON.stringify(pipeline)}`)
+  }
 
 }

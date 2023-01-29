@@ -1,0 +1,26 @@
+
+<nz-table #middleTable nzBordered nzSize="middle" [nzData]="salaire" [nzScroll]="{ x: '1150px', y: '100%' }" nzBordered    >
+    <thead>
+      <tr>
+        <th [nzWidth]="'200px'">mois</th>  
+        <th [nzWidth]="'200px'">montant</th>  
+        <th [nzWidth]="'200px'">responsable</th>  
+        <th [nzWidth]="'200px'">datePayement</th>    
+        <th [nzWidth]="'200px'" [nzRight]="true">ACTION</th>  
+      </tr>
+    </thead>
+    <tbody  >
+      <tr *ngFor="let data of middleTable.data"> 
+        <td>{{ data.mois }}</td> 
+        <td>{{ data.montant }}</td> 
+        <td>{{ data.responsable.name }}</td> 
+        <td>{{ data.datePayement }}</td>   
+        <td [nzRight]="true">
+            <i class="mx-2 bi bi-trash-fill"></i> 
+            <i class="mx-2 bi bi-pencil-fill"></i>
+            <i [routerLink]="[data.id,'detail']" class="mx-2 bi bi-eye-fill"></i>
+        </td> 
+
+      </tr>
+    </tbody>
+  </nz-table>  
