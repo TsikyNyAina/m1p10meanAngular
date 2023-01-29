@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Voiture } from 'src/app/entity/Voiture';
 import { ClientComponent } from '../client.component';
 import { ClientService } from '../client.service';
 
@@ -9,6 +10,7 @@ import { ClientService } from '../client.service';
 })
 export class VoitureComponent implements OnInit {
   voiture:Array<any>=new Array();
+  voiturei = new Voiture();
 
   constructor(private clientComponent:ClientComponent,private clientService:ClientService) {  
     this.clientService.getVoitureByClientId(this.clientComponent.clientId).subscribe((voiture:any)=>console.dir(this.voiture=voiture))
