@@ -1,1 +1,4 @@
-<nz-rate [ngModel]="value||0" nzAllowHalf></nz-rate>
+<span class="d-flex align-items-center">
+    <nz-rate [(ngModel)]="value" [nzTooltips]="tooltips" nzAllowHalf></nz-rate> 
+    <b class="px-5">{{this.value*20 }} %</b>
+</span>

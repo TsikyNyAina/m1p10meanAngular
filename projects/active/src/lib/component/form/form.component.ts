@@ -1,5 +1,5 @@
-import { ChangeDetectorRef, Component, ComponentFactoryResolver, HostBinding, Injector, Input, QueryList, Type, ViewChildren, ViewContainerRef } from '@angular/core';
-import { ControlContainer, FormControl, FormGroupDirective, NgControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ChangeDetectorRef, Component, ComponentFactoryResolver, HostBinding, Injector, Input, QueryList, ViewChildren, ViewContainerRef } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Data, Item } from '../../type';
 
 
@@ -12,20 +12,7 @@ import { Data, Item } from '../../type';
 @Component({
   selector: 'lib-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css'],
-  viewProviders: [
-      {
-          provide: ControlContainer,
-          useExisting: FormGroupDirective
-      }
-  ] ,
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      multi:true,
-      useExisting: FormComponent
-    }
-  ]
+  styleUrls: ['./form.component.css'], 
 })
 export class FormComponent{
   @ViewChildren("vcr",{read:ViewContainerRef}) viewContainerRefList: QueryList<ViewContainerRef> 
@@ -50,12 +37,7 @@ export class FormComponent{
     if(!this.item?.component) return;
     setTimeout(() => {
       this.class=this.item.class
-    }, 10);
-    // if(this.item && this.item.hide===undefined){
-    //   console.log("eee");
-      
-    //   this.item.hide=false
-    // }
+    }, 10); 
     const componentFactory=this.componentFactoryResolver.resolveComponentFactory(this.item.component)
     const injector=Injector.create([
       {provide:Data,useValue: this.item },

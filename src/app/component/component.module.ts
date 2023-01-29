@@ -7,8 +7,8 @@ import { SelectComponent } from './input/select/select.component';
 import { NumberComponent } from './input/number/number.component';
 import { StarComponent } from './input/star/star.component';
 import { SharedModule } from '../shared/shared.module';
-
-
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     TextComponent,
@@ -21,14 +21,16 @@ import { SharedModule } from '../shared/shared.module';
     ActiveModule,
     FormsModule,
     ReactiveFormsModule,
-    // SharedModule,
-    
+    BrowserAnimationsModule,
+    NzButtonModule,
   ],
   exports:[
+    BrowserAnimationsModule,
     CommonModule,
     TextComponent,
     NumberComponent,
-    StarComponent
+    StarComponent,
+    
   ] 
 })
 export class ComponentModule { }

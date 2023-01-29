@@ -4,6 +4,8 @@ import { FormComponent } from './form/form.component';
 import { DirectiveModule } from '../directive/directive.module';
 import { PipeModule } from '../pipe/pipe.module';
 import { InlineFormComponent } from './inline-form/inline-form.component';
+import { NzRateModule } from 'ng-zorro-antd/rate';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -15,10 +17,14 @@ import { InlineFormComponent } from './inline-form/inline-form.component';
   imports: [
     CommonModule,
     DirectiveModule,
-    PipeModule
+    PipeModule,
+    NzRateModule,
+    BrowserAnimationsModule
   ],
   exports:[
-    FormComponent
+    FormComponent,
+    NzRateModule,
+    BrowserAnimationsModule
   ]
 })
 export class ComponentModule { }
