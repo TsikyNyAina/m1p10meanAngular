@@ -11,7 +11,6 @@ export class ClientComponent implements OnInit {
 
   constructor(private clientService:ClientService) { 
     // this.clientService.getClientById(this.clientId). subscribe(console.log) 
-
   }
 
   ngOnInit(): void {

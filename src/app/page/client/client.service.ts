@@ -35,7 +35,9 @@ export class ClientService {
     return this.http.get(`${API_URL}/voiture/option/${JSON.stringify(param)}`)
   }
   
-
+  insertClient(client: any){
+    return this.http.post(`${API_URL}/clientController`, client).toPromise();
+  }
 
 
 }
