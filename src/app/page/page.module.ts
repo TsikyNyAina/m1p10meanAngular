@@ -46,9 +46,7 @@ import { ActiveModule } from 'projects/active/src/src';
     HistoriqueComponent,
     ReparationComponent,
     DetailReparationComponent,
-    ReparationSaveComponent,
-    
-    
+    ReparationSaveComponent, 
     ClientModule,
     ResponsableModule
   ]

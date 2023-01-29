@@ -1,1 +1,10 @@
-<input type="number" class="row w-100 m-0 py-2 form-control"  [(ngModel)]="value"   > 
+ 
+<nz-input-number
+    nzSize="large" 
+    class="w-100"
+    [(ngModel)]="value"
+    [nzMin]="this.item.min||-99999999999999999"
+    [nzMax]="this.item.max||+99999999999999999"
+    [nzStep]="this.item.step||1"
+    [nzDisabled]="this.item.isDisabled"
+></nz-input-number>

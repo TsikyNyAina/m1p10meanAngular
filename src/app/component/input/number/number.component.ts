@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, NgControl } from '@angular/forms';
-import { Data } from 'projects/active/src/lib/type';
+import { Data, Item } from 'projects/active/src/lib/type';
 
 @Component({
   selector: 'app-number',
@@ -8,6 +8,7 @@ import { Data } from 'projects/active/src/lib/type';
   styleUrls: ['./number.component.scss']
 })
 export class NumberComponent {
+  item:Item;
   #value:any=0;
   set value(value:any){  
       this.#value=value;
@@ -28,8 +29,8 @@ export class NumberComponent {
   get formControl(){
     return this.#formControl
   }
-  constructor(data:Data) { 
-    
+  constructor(item:Data) { 
+    this.item=item as any
     
   } 
    

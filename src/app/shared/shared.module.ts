@@ -6,6 +6,7 @@ import { PipeModule } from '../pipe/pipe.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';  
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { NzZorroModule } from './nzZorro.module';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -16,7 +17,7 @@ import { NzZorroModule } from './nzZorro.module';
     FormsModule,
     ReactiveFormsModule,  
     BrowserAnimationsModule, 
-    NzZorroModule
+    NzZorroModule,
   ],
   exports:[
     CommonModule,
@@ -26,7 +27,7 @@ import { NzZorroModule } from './nzZorro.module';
     FormsModule,
     ReactiveFormsModule,  
     BrowserAnimationsModule,
-    NzZorroModule
+    NzZorroModule, 
   ]
 })
 export class SharedModule { }
