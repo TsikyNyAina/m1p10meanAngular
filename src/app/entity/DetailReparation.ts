@@ -4,6 +4,8 @@ import { NumberComponent, SelectComponent } from "../component/input";
 export class DetailReparation{
     reparationId:string;
     @form({
+        key:(d:any)=>`${d.marquePieceName}` ,
+        value:(d:any)=>d.id,
         component:SelectComponent,
         containerId:"0"
     })

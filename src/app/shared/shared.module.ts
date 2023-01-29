@@ -7,7 +7,7 @@ import { ComponentModule } from '../component/component.module';
 import { DirectiveModule } from '../directive/directive.module';
 import { PipeModule } from '../pipe/pipe.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { StarRatingModule } from 'angular-star-rating';
 
 @NgModule({
   declarations: [],
@@ -18,7 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DirectiveModule,
     PipeModule, 
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StarRatingModule.forRoot()
   ],
   exports:[
     CommonModule,
@@ -27,7 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DirectiveModule,
     PipeModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StarRatingModule
   ]
 })
 export class SharedModule { }

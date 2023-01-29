@@ -11,12 +11,12 @@ export class ClientService {
 
   constructor(private http:HttpClient) { }
   getClientById(clientId:string){
-    return this.http.get(`${API_URL}/clientController/${clientId}`)
+    return this.http.get(`${API_URL}/client/${clientId}`)
   }
 
   getClient(mail:string,tmdp:string){
     let match = [{$match:{email:mail,mdp:tmdp}}];
-    return this.http.get(`${API_URL}/clientController/option/${JSON.stringify(match)}`)
+    return this.http.get(`${API_URL}/client/option/${JSON.stringify(match)}`)
   }
 
   getVoitureByClientId(clientId:string){
@@ -36,8 +36,10 @@ export class ClientService {
   }
   
   insertClient(client: any){
-    return this.http.post(`${API_URL}/clientController`, client).toPromise();
+    return this.http.post(`${API_URL}/client`, client).toPromise();
   }
-
+  getMarquePiece(){
+    return this.http.get(`${API_URL}/marquePiece/option/[]`);
+  }
 
 }

@@ -11,20 +11,17 @@ import { ClientService } from '../../client.service';
 export class ReparationSaveComponent{
   reparation=new Reparation()
   detailReparation=new Array<DetailReparation>();
-
-
-
   voiture:Array<any>=new Array();
-
+  marquePiece:Array<any>=new Array();
   
   constructor(private clientComponent:ClientComponent,private clientService:ClientService) {  
     this.clientService.getVoitureByClientId(this.clientComponent.clientId).subscribe((voiture:any)=>{
       this.voiture=voiture
       getItem(this.reparation).voitureId.data=voiture 
-      
-      
     })
-    
+    this.clientService.getMarquePiece().subscribe((marquePiece:any)=>{
+      this.marquePiece=marquePiece 
+    })
     
   } 
 
@@ -35,7 +32,14 @@ export class ReparationSaveComponent{
 
 
   addDetail(){
-    this.detailReparation.push(new DetailReparation());
+    const detailReparation=new DetailReparation();
+    detailReparation.reparationId=this.reparation.id;
+    getItem(detailReparation).marquePieceId.data=this.marquePiece
+
+
+
+    this.detailReparation.push(detailReparation);
+
   }
 
 

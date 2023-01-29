@@ -9,39 +9,36 @@
 
 
 <div   class="row my-5" >
-    <div class="col">
+    <h3 class="col">
         Detail Reparation
+    </h3> 
+    <div class="col-md-12">
+        <table class=" table p-0  ">
+            <tbody>
+            <!-- <thead> -->
+                <tr>
+                    <th class="col-md-3">Piece</th>
+                    <th class="col-md-3">Etat</th>
+                    <th class="col-md-2">Quantity</th>
+                    <th class="col-md-2">Prix</th>
+                    <th class="col-md-2"></th>
+                </tr>
+            <!-- </thead> -->
+                <tr [form]="d" *ngFor="let d of detailReparation" >
+                    <td class="ps-0" id="0"></td>
+                    <td class="ps-0" id="1"></td>
+                    <td class="ps-0" id="2"></td>
+                    <td class="ps-0" id="3"></td>
+                    <td class="text-center align-middle" >
+                        <i class="mx-2 bi bi-trash-fill text-danger"></i> 
+                        <i class="mx-2 bi bi-pencil-fill text-primary"></i>
+                        <i class="mx-2 bi bi-eye-fill text-success"></i>
+                    </td>
+                </tr>
+            </tbody>
+    
+        </table>
     </div>
-    <!-- <div  class="col-md-12" > 
-        <div class="row my-3" >
-            <div class="col-md-3" id="0"></div>
-            <div class="col-md-3" id="1"></div>
-            <div class="col-md-3" id="2"></div> 
-            <div class="col-md-3" id="3"></div>  
-        </div>
-        <hr>
-    </div> -->
-    <table class="col-md-12 table">
-        <thead>
-            <tr>
-                <th class="col-md-3">Piece</th>
-                <th class="col-md-3">Etat</th>
-                <th class="col-md-2">Quantity</th>
-                <th class="col-md-2">Prix</th>
-                <th class="col-md-2"></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr [form]="d" *ngFor="let d of detailReparation">
-                <td id="0"></td>
-                <td id="1"></td>
-                <td id="2"></td>
-                <td id="3"></td>
-                <td > delete</td>
-            </tr>
-        </tbody>
-
-    </table>
 
 
 
@@ -60,6 +57,6 @@
 
 <div class="row my-3">
     <div class="col text-end">
-        <button (click)="submit()" class="btn btn-primary">show</button>
+        <button (click)="submit()" class="btn btn-primary">save</button>
     </div>
 </div>

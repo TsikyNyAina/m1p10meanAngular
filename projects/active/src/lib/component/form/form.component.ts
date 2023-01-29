@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, ComponentFactoryResolver, Injector, Input, QueryList, Type, ViewChildren, ViewContainerRef } from '@angular/core';
+import { ChangeDetectorRef, Component, ComponentFactoryResolver, HostBinding, Injector, Input, QueryList, Type, ViewChildren, ViewContainerRef } from '@angular/core';
 import { ControlContainer, FormControl, FormGroupDirective, NgControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { Data, Item } from '../../type';
 
@@ -33,7 +33,7 @@ export class FormComponent{
   formControl: FormControl;
   formControlName:string;
   model:any
- 
+  @HostBinding("class") class:string;
 
 
 
@@ -44,11 +44,13 @@ export class FormComponent{
   ngAfterViewInit(): void {  
       this.viewContainerRefList.changes.subscribe((data:QueryList<ViewContainerRef>)=>data.length>0 && this.displayComponent(data.get(0) as ViewContainerRef))
       this.viewContainerRefList.length>0 && this.displayComponent(this.viewContainerRefList.get(0) as ViewContainerRef)
-   
-    
-  } 
+      
+    } 
   displayComponent(viewContainerRef:ViewContainerRef){
     if(!this.item?.component) return;
+    setTimeout(() => {
+      this.class=this.item.class
+    }, 10);
     // if(this.item && this.item.hide===undefined){
     //   console.log("eee");
       
