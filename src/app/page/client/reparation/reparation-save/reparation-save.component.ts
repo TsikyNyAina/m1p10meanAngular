@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core'; 
 @Component({
   selector: 'app-reparation-save',
   templateUrl: './reparation-save.component.html',
@@ -8,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 export class ReparationSaveComponent implements OnInit {
 
   constructor() { }
-
+  
   ngOnInit(): void {
   }
 

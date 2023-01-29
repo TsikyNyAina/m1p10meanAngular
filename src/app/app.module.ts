@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ActiveModule } from 'projects/active/src/src';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,6 +8,7 @@ import { ComponentModule } from './component/component.module';
 import { DirectiveModule } from './directive/directive.module';
 import { PageModule } from './page/page.module';
 import { PipeModule } from './pipe/pipe.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,8 @@ import { PipeModule } from './pipe/pipe.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PageModule,
-    ComponentModule,
-    DirectiveModule,
-    PipeModule
+    SharedModule,
+    ActiveModule
   ],
   providers: [],
   bootstrap: [AppComponent]

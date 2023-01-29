@@ -9,6 +9,7 @@ import { ReparationComponent } from './reparation/reparation.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { DetailReparationComponent } from './reparation/detail-reparation/detail-reparation.component';
 import { ReparationSaveComponent } from './reparation/reparation-save/reparation-save.component';
+import { ActiveModule } from 'projects/active/src/src';
 
 
 
@@ -25,7 +26,7 @@ import { ReparationSaveComponent } from './reparation/reparation-save/reparation
   imports: [
     CommonModule,
     ClientRoutingModule,
-    SharedModule
+    ActiveModule
   ],
   exports:[
     ClientComponent,

@@ -1,0 +1,19 @@
+<ng-template [ngIf]="!item?.hide" >
+    <div class="row" >
+        <div class="col"> 
+            <b>{{item.label || control?.name}}</b> 
+        </div>
+    </div>
+    <div class="row" >
+        <div class="col">
+            <ng-template #vcr [ngIf]="true">
+                
+            </ng-template>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-end text-danger">
+            error message
+        </div>
+    </div>
+</ng-template> 
