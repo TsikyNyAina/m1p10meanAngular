@@ -6,7 +6,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SelectComponent } from './input/select/select.component';
 import { NumberComponent } from './input/number/number.component';
 import { StarComponent } from './input/star/star.component';
-import { StarRatingModule } from 'angular-star-rating';
 
 
 @NgModule({
@@ -21,13 +20,11 @@ import { StarRatingModule } from 'angular-star-rating';
     ActiveModule,
     FormsModule,
     ReactiveFormsModule,
-    StarRatingModule
   ],
   exports:[
     CommonModule,
     TextComponent,
     NumberComponent,
-    StarRatingModule,
     StarComponent
   ] 
 })
