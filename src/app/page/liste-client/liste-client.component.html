@@ -1,19 +1,18 @@
 <p>Liste Client</p>
-
-<table class="table">
+<nz-table #middleTable nzBordered nzSize="middle" [nzData]="client" [nzScroll]="{x:'100%',y:'100%'}" nzBordered nzSize="middle"  class="h-100" nzNoResult="hahahaaha">
     <thead>
-        <tr>
-            <th>Nom</th>
-            <th>numero</th>
-            <th>Email</th>
-        </tr>
+      <tr>
+        <th [nzWidth]="'200px'">Nom</th>   
+        <th [nzWidth]="'200px'">Numero</th>  
+        <th [nzWidth]="'200px'">Email</th>   
+      </tr>
     </thead>
-    <tBody>
-        <tr *ngFor="let v of client">
-            <td>{{v.name}}</td>
-            <td>{{v.phoneNumber}}</td>
-            <td>{{v.email}}</td>
-            <td [routerLink]="[v.id]">{{v.id}}</td>
-        </tr>
-    </tBody>
-</table>
+    <tbody class="h-100 bg-info">
+      <tr *ngFor="let data of middleTable.data"> 
+        <td>{{ data.name }}</td> 
+        <td>{{ data.phoneNumber }}</td> 
+        <td>{{ data.email }}</td>
+
+      </tr>
+    </tbody>
+  </nz-table> 

@@ -1,14 +1,15 @@
-<table class="table">
+<nz-table #middleTable nzBordered nzSize="middle" [nzData]="marqueVoiture" [nzScroll]="{x:'100%',y:'100%'}" nzBordered nzSize="middle"  class="h-100" nzNoResult="hahahaaha">
     <thead>
-        <tr>
-            <th>MARQUE</th>
-            <th>Id</th>
-        </tr>
+      <tr>
+        <th [nzWidth]="'200px'">Marque</th>   
+        <th [nzWidth]="'200px'">Id</th>  
+      </tr>
     </thead>
-    <tBody>
-        <tr *ngFor="let v of marqueVoiture">
-            <td>{{v.marqueName}}</td>
-            <td [routerLink]="[v.id]">{{v.id}}</td>
-        </tr>
-    </tBody>
-</table>
+    <tbody class="h-100 bg-info">
+      <tr *ngFor="let data of middleTable.data"> 
+        <td>{{ data.marqueName }}</td> 
+        <td [routerLink]="[data.id]">{{data.id}}</td>
+
+      </tr>
+    </tbody>
+  </nz-table>

@@ -13,9 +13,9 @@
         Detail Reparation
     </h3> 
     <div class="col-md-12">
-        <table class=" table p-0  ">
+        <!-- <table class=" table p-0  ">
             <tbody>
-            <!-- <thead> -->
+            <thead> 
                 <tr>
                     <th class="col-md-3">Piece</th>
                     <th class="col-md-3">Etat</th>
@@ -23,7 +23,7 @@
                     <th class="col-md-2">Prix</th>
                     <th class="col-md-2"></th>
                 </tr>
-            <!-- </thead> -->
+             </thead> 
                 <tr [form]="d" *ngFor="let d of detailReparation" >
                     <td class="ps-0" id="0"></td>
                     <td class="ps-0" id="1"></td>
@@ -37,7 +37,30 @@
                 </tr>
             </tbody>
     
-        </table>
+        </table> -->
+        <nz-table #middleTable nzBordered nzSize="middle" [nzData]="detailReparation" [nzScroll]="{x:'100%',y:'100%'}" nzBordered nzSize="middle"  class="h-100" nzNoResult="hahahaaha">
+            <thead>
+                <tr> 
+                    <th [nzWidth]="'200px'">Piece</th>   
+                    <th [nzWidth]="'200px'">Etat</th>   
+                    <th [nzWidth]="'200px'">Quantity</th>   
+                    <th [nzWidth]="'200px'">Prix</th>   
+                </tr>
+            </thead>
+            <tbody class="h-100 bg-info">
+                <tr [form]="data" *ngFor="let data of middleTable.data">
+                    <td class="ps-0" id="0"></td>
+                    <td class="ps-0" id="1"></td>
+                    <td class="ps-0" id="2"></td>
+                    <td class="ps-0" id="3"></td>
+                    <td class="text-center align-middle" >
+                        <i class="mx-2 bi bi-trash-fill text-danger"></i> 
+                        <i class="mx-2 bi bi-pencil-fill text-primary"></i>
+                        <i class="mx-2 bi bi-eye-fill text-success"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </nz-table>
     </div>
 
 
