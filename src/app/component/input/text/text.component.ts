@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, NgControl } from '@angular/forms';
-import { Data } from 'projects/active/src/lib/type';
+import { Data, Item } from 'projects/active/src/lib/type';
 
 @Component({
   selector: 'app-text',
@@ -8,7 +8,8 @@ import { Data } from 'projects/active/src/lib/type';
   styleUrls: ['./text.component.scss']
 })
 export class TextComponent {
-  #value:any="hahaha";
+  #value:any;
+  item:Item;
   set value(value:any){  
       this.#value=value;
       if(this.formControl?.value!=value){
@@ -28,8 +29,8 @@ export class TextComponent {
   get formControl(){
     return this.#formControl
   }
-  constructor(data:Data) { 
-    
+  constructor(item:Data) { 
+    this.item=item as any 
     
   } 
    
