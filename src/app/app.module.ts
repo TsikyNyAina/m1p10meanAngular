@@ -11,6 +11,10 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 registerLocaleData(en);
 import { NZ_I18N, en_US } from 'ng-zorro-antd/i18n';
+import { ComponentModule } from './component/component.module';
+import { PageModule } from './page/page.module';
+import { PipeModule } from './pipe/pipe.module';
+import { DirectiveModule } from './directive/directive.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -21,7 +25,12 @@ import { NZ_I18N, en_US } from 'ng-zorro-antd/i18n';
     SharedModule,
     ActiveModule,
     ClientModule,
-    ResponsableModule
+    ResponsableModule,
+    ComponentModule,
+    PageModule,
+    ComponentModule,
+    DirectiveModule,
+    PipeModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
