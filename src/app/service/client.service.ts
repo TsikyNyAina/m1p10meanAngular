@@ -19,6 +19,10 @@ export class ClientService {
     return this.http.get(`${API_URL}/client/option/${JSON.stringify(match)}`)
   }
 
+  getAllClient(){
+    return this.http.get(`${API_URL}/client/option/[]`)
+  }
+
   getVoitureByClientId(clientId:string){
     const param=[
       {
@@ -33,6 +37,11 @@ export class ClientService {
       }
     ]
     return this.http.get(`${API_URL}/voiture/option/${JSON.stringify(param)}`)
+  }
+
+  getAllVoiture(){
+    
+    return this.http.get(`${API_URL}/voiture/option/[]`)
   }
   
   insertClient(client: any){

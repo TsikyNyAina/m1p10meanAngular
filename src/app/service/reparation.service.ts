@@ -29,6 +29,10 @@ export class ReparationService {
 
     return this.http.get(`${API_URL}/reparation/option/${JSON.stringify(param)}`)
   }
+
+  getAllReparation(){
+    return this.http.get(`${API_URL}/reparation/option/[]`)
+  }
   getReparationDetailByReparationId(reparationId:string){
     const param=[
       {

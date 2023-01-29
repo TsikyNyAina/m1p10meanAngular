@@ -14,7 +14,7 @@ export class VoitureComponent implements OnInit {
   voiturei = new Voiture();
 
   constructor(private clientComponent:ClientComponent,private clientService:ClientService) {  
-    this.clientService.getVoitureByClientId(this.clientComponent.clientId).subscribe((voiture:any)=>console.dir(this.voiture=voiture))
+    this.clientService.getAllVoiture().subscribe((voiture:any)=>console.dir(this.voiture=voiture))
     this.clientService.getModeleVoiture().subscribe((modele:any)=>{
       console.log(modele);
       

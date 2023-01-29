@@ -12,6 +12,7 @@ import { MarqueVoitureComponent } from './marque-voiture/marque-voiture.componen
 import { MarqueVoitureSaveComponent } from './marque-voiture-save/marque-voiture-save.component';
 import { SharedModule } from '../shared/shared.module';
 import { MarquePieceComponent } from './marque-piece/marque-piece.component';
+import { ListeClientComponent } from './liste-client/liste-client.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { MarquePieceComponent } from './marque-piece/marque-piece.component';
     ReparationSaveComponent,
     MarqueVoitureComponent,
     MarqueVoitureSaveComponent,
-    MarquePieceComponent, 
+    MarquePieceComponent,
+    ListeClientComponent, 
   ],
   imports: [
     CommonModule,

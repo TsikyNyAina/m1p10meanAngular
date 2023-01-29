@@ -7,6 +7,7 @@ import { DetailReparationComponent } from '../detail-reparation/detail-reparatio
 import { ReparationSaveComponent } from '../reparation-save/reparation-save.component';
 import { ReparationComponent } from '../reparation/reparation.component';
 import { VoitureComponent } from '../voiture/voiture.component';
+import { ListeClientComponent } from '../liste-client/liste-client.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,7 @@ const routes: Routes = [
     children:[
       {path:"profile",component:ProfilComponent},
       {path:"voiture",component:VoitureComponent},
+      {path:"clients",component:ListeClientComponent},
       {path:"historique",component:HistoriqueComponent},
       {path:"reparation",component:ReparationComponent},
       {path:"reparation/:id/detail",component:DetailReparationComponent},
