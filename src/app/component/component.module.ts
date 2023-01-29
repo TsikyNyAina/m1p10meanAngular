@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SelectComponent } from './input/select/select.component';
 import { NumberComponent } from './input/number/number.component';
 import { StarComponent } from './input/star/star.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -20,6 +21,8 @@ import { StarComponent } from './input/star/star.component';
     ActiveModule,
     FormsModule,
     ReactiveFormsModule,
+    // SharedModule,
+    
   ],
   exports:[
     CommonModule,

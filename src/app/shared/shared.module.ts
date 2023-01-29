@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { ActiveModule } from 'projects/active/src/src';
-import { PageModule } from '../page/page.module';
-import { ComponentModule } from '../component/component.module';
+import { ActiveModule } from 'projects/active/src/src';  
 import { DirectiveModule } from '../directive/directive.module';
 import { PipeModule } from '../pipe/pipe.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
-
+import { NzRateModule } from 'ng-zorro-antd/rate';
 @NgModule({
   declarations: [],
   imports: [
@@ -27,6 +25,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PipeModule,
     FormsModule,
     ReactiveFormsModule,
+    NzRateModule
   ]
 })
 export class SharedModule { }
