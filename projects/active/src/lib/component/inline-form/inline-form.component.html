@@ -1,15 +1,12 @@
-<ng-template [ngIf]="!item?.hide" >
-    <div class="row" [var]="formControl.errors | firstKey"  #error="var">
-        <div class="col"> 
-            <b>{{item.label  }}</b> 
-        </div>
-    </div>
-    <div class="row" >
+<ng-template [ngIf]="!item?.hide" > 
+    <div class="row d-flex align-items-center" [var]="formControl.errors | firstKey"  #error="var"> 
+            <b class="col-md-2 text-start">{{item.label  }}</b>  
         <div class="col text-start">
             <ng-template #vcr [ngIf]="true">
                 
             </ng-template>
         </div>
+        
     </div>
     <div class="row">
         <div class="col text-end text-danger">

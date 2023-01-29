@@ -75,8 +75,8 @@ export class FormDirective {
   }
   displayComponent(viewContainerRef:ViewContainerRef,item:Item,formControl:any){
      
-    const componentFactory=this.componentFactoryResolver.resolveComponentFactory(FormComponent) 
-    const componentRef=viewContainerRef.createComponent(componentFactory);
+    const componentFactory=this.componentFactoryResolver.resolveComponentFactory(item.template||FormComponent) 
+    const componentRef:any=viewContainerRef.createComponent(componentFactory);
     componentRef.instance.item=item
     componentRef.instance.formControl=formControl
     return componentRef 

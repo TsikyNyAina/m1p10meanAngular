@@ -27,7 +27,7 @@ export class ReparationSaveComponent{
 
 
   submit(){
-    console.log(this.reparation);
+    console.log(this.detailReparation);
   }
 
 

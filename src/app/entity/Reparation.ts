@@ -1,5 +1,6 @@
+import { InlineFormComponent } from "projects/active/src/lib/component/inline-form/inline-form.component";
 import { form } from "projects/active/src/lib/utils";
-import { NumberComponent, SelectComponent, TextComponent } from "../component/input";
+import { NumberComponent, SelectComponent, StarComponent, TextComponent } from "../component/input";
 
 export class Reparation{
     id:string;
@@ -16,7 +17,8 @@ export class Reparation{
     voitureId:string;
     @form({
         label:"Avancement",
-        component:NumberComponent,
+        component:StarComponent,
+        template:InlineFormComponent,
         class:"my-2"
     })
     avancement:number=0;

@@ -1,5 +1,5 @@
 import { form } from "projects/active/src/lib/utils";
-import { NumberComponent, SelectComponent } from "../component/input";
+import { NumberComponent, SelectComponent, StarComponent } from "../component/input";
 
 export class DetailReparation{
     reparationId:string;
@@ -11,8 +11,9 @@ export class DetailReparation{
     })
     marquePieceId: string;
     @form({
-        component:NumberComponent,
-        containerId:"1"
+        component:StarComponent,
+        containerId:"1",
+        class:"text-start d-flex"
     })
     etat:number;
     @form({

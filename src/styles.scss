@@ -3,6 +3,17 @@
 @import "~css-star-rating/scss/star-rating";
 
 
-    .bi{
-        font-size: 18px;
-    }
+.bi{
+    font-size: 18px;
+}
+star-rating *{  
+    margin-bottom: 0 !important;
+    text-align: start;
+    display: inline;
+}
+.star-container {
+    justify-content:start;
+}
+.rating{
+    display: inline;    
+}
