@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MarqueVoiture } from 'src/app/entity'; 
-import { ResponsableService } from '../../service/responsable.service';
+import { Component, OnInit } from '@angular/core'; 
+import { ResponsableService } from '../../service';
 
 @Component({
   selector: 'app-marque-voiture',

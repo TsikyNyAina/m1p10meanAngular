@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Voiture } from 'src/app/entity/Voiture'; 
 import { getItem } from 'projects/active/src/lib/utils';
 import { ClientComponent } from '../client/client.component';
-import { ClientService } from '../../service/client.service';
+import { ClientService } from '../../service';
 
 @Component({
   selector: 'app-voiture',

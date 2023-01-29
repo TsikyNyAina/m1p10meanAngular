@@ -3,9 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ResponsableComponent } from './responsable.component';
 import { ResponsableRoutingModule } from './responsable-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { ActiveModule } from 'projects/active/src/src';
-import { MarqueVoitureComponent } from '../marque-voiture/marque-voiture.component';
-import { MarqueVoitureSaveComponent } from '../marque-voiture-save/marque-voiture-save.component'; 
+import { ActiveModule } from 'projects/active/src/src'; 
 
 
 

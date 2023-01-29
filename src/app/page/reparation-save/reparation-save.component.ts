@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { getItem } from 'projects/active/src/lib/utils';
 import { DetailReparation, Reparation } from 'src/app/entity'; 
 import { ClientComponent } from '../client/client.component';
-import { ClientService } from '../../service/client.service';
+import { ClientService } from '../../service';
 @Component({
   selector: 'app-reparation-save',
   templateUrl: './reparation-save.component.html',
