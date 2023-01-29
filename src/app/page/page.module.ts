@@ -11,6 +11,7 @@ import { VoitureComponent } from './voiture/voiture.component';
 import { MarqueVoitureComponent } from './marque-voiture/marque-voiture.component';
 import { MarqueVoitureSaveComponent } from './marque-voiture-save/marque-voiture-save.component';
 import { SharedModule } from '../shared/shared.module';
+import { MarquePieceComponent } from './marque-piece/marque-piece.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { SharedModule } from '../shared/shared.module';
     DetailReparationComponent,
     ReparationSaveComponent,
     MarqueVoitureComponent,
-    MarqueVoitureSaveComponent, 
+    MarqueVoitureSaveComponent,
+    MarquePieceComponent, 
   ],
   imports: [
     CommonModule,

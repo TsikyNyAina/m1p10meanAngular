@@ -15,7 +15,6 @@ export class MarqueVoitureSaveComponent {
     const modelVoiture=new ModelVoiture();
     modelVoiture.marqueVoitureId=this.marqueVoiture.id;
     this.modelVoiture.push(modelVoiture)
-    
   }
   submit(){
 
