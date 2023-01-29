@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ComponentModule } from './component/component.module';
 import { DirectiveModule } from './directive/directive.module';
 import { ClientModule } from './page/client/client.module';
+import { ResponsableModule } from './page/responsable/responsable.module';
 import { PageModule } from './page/page.module';
 import { PipeModule } from './pipe/pipe.module';
 import { SharedModule } from './shared/shared.module';
@@ -20,7 +21,8 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     SharedModule,
     ActiveModule,
-    ClientModule
+    ClientModule,
+    ResponsableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
