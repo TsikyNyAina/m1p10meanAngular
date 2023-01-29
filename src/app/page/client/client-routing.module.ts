@@ -16,6 +16,7 @@ const routes: Routes = [
     path:"",
     component:ClientComponent,
     children:[
+      {path:"",redirectTo:"clients",pathMatch:"full"},
       {path:"profile",component:ProfilComponent},
       {path:"loginClient",component:LoginClientComponent},
       {path:"signupClient",component:SignupClientComponent},
