@@ -1,5 +1,5 @@
 
-<nz-table #middleTable nzBordered nzSize="middle" [nzData]="reparation" [nzScroll]="{ x: '1150px', y: '100%' }" nzBordered    >
+<nz-table #middleTable nzBordered nzSize="middle" [nzData]="achatPiece" [nzScroll]="{ x: '1150px', y: '100%' }" nzBordered    >
     <thead>
       <tr>
         <th [nzWidth]="'200px'">VOITURE</th>   
@@ -14,13 +14,12 @@
     </thead>
     <tbody  >
       <tr *ngFor="let data of middleTable.data"> 
-        <td>{{ data.voiture.numero }}</td> 
-        <td>{{ data.startDate }}</td> 
-        <td>{{ data.endDate }}</td> 
-        <td>{{ data.avancement }}</td> 
-        <td>{{ data.cost }}</td> 
-        <td>{{ data.description }}</td>  
-        <td>{{ data.status }}</td>  
+        <td>{{ data.id }}</td> 
+        <td>{{ data.marquePiece.marquePieceName }}</td> 
+        <td>{{ data.prixUnitaire }}</td> 
+        <td>{{ data.quantity }}</td> 
+        <td>{{ data.prixUnitaire*data.quantity }}</td> 
+        <td>{{ data.dateAchatPiece }}</td>  
         <td [nzRight]="true">
             <i class="mx-2 bi bi-trash-fill"></i> 
             <i class="mx-2 bi bi-pencil-fill"></i>

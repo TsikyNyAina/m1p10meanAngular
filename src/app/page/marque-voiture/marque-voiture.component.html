@@ -5,7 +5,7 @@
         <th [nzWidth]="'200px'">Id</th>  
       </tr>
     </thead>
-    <tbody class="h-100 bg-info">
+    <tbody >
       <tr *ngFor="let data of middleTable.data"> 
         <td>{{ data.marqueName }}</td> 
         <td [routerLink]="[data.id]">{{data.id}}</td>

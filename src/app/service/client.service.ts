@@ -52,10 +52,7 @@ export class ClientService {
     return this.http.post(`${API_URL}/voiture`, voiture).toPromise();
   }
 
-  getMarquePiece(){
-    return this.http.get(`${API_URL}/marquePiece/option/[]`);
-  }
-
+  
   getModeleVoiture(){
     return this.http.get(`${API_URL}/ModelVoiture/option/[]`);
   }

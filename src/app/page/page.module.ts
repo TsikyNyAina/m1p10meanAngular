@@ -17,6 +17,8 @@ import { LoginClientComponent } from './login-client/login-client.component';
 import { SignupClientComponent } from './signup-client/signup-client.component';
 import { ActiveModule } from 'projects/active/src/src';
 import { ComponentModule } from '../component/component.module';
+import { AchatPieceComponent } from './achat-piece/achat-piece.component';
+import { AchatPieceSaveComponent } from './achat-piece-save/achat-piece-save.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { ComponentModule } from '../component/component.module';
     MarquePieceComponent,
     ListeClientComponent,
     LoginClientComponent,
-    SignupClientComponent
+    SignupClientComponent,
+    AchatPieceComponent,
+    AchatPieceSaveComponent
   ],
   imports: [
     CommonModule,
@@ -50,7 +54,8 @@ import { ComponentModule } from '../component/component.module';
     DetailReparationComponent,
     ReparationSaveComponent, 
     ClientModule,
-    ResponsableModule
+    ResponsableModule,
+    AchatPieceComponent
   ]
 })
 export class PageModule { }

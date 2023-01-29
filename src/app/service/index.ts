@@ -1,3 +1,5 @@
 export * from "./client.service"
 export * from "./reparation.service"
 export * from "./responsable.service"
+export * from "./achat-piece.service"
+export * from "./marque-piece.service"
