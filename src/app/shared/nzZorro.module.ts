@@ -7,6 +7,7 @@ import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
+import { NzTableModule } from 'ng-zorro-antd/table';
 @NgModule({
   declarations: [],
   imports: [
@@ -17,7 +18,8 @@ import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
     NzSwitchModule,
     NzDatePickerModule,
     NzInputModule,
-    NzInputNumberModule
+    NzInputNumberModule,
+    NzTableModule,
   ],
   exports:[
     CommonModule,
@@ -27,7 +29,8 @@ import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
     NzSwitchModule,
     NzDatePickerModule,
     NzInputModule,
-    NzInputNumberModule
+    NzInputNumberModule,
+    NzTableModule,
   ]
 })
 export class NzZorroModule { }

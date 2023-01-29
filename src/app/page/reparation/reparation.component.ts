@@ -21,7 +21,7 @@ export class ReparationComponent implements OnInit {
     this.reparationService.getReparationByClientId(this.clientId).subscribe(console.log)
 
   }
-
+  JSON=JSON
   ngOnInit(): void {
   }
 

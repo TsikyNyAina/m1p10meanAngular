@@ -12,6 +12,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { SwitchComponent } from './input/switch/switch.component';
 import { DateComponent } from './input/date/date.component';
+import { TableComponent } from './table/table.component';
 @NgModule({
   declarations: [
     TextComponent,
@@ -19,7 +20,8 @@ import { DateComponent } from './input/date/date.component';
     NumberComponent,
     StarComponent,
     SwitchComponent,
-    DateComponent
+    DateComponent,
+    TableComponent
   ],
   imports: [
     CommonModule,
@@ -27,10 +29,13 @@ import { DateComponent } from './input/date/date.component';
     SharedModule
   ],
   exports:[ 
-    CommonModule,
     TextComponent,
+    SelectComponent,
     NumberComponent,
     StarComponent,
+    SwitchComponent,
+    DateComponent,
+    TableComponent
     
   ] 
 })

@@ -1,26 +1,64 @@
 <h3>REPARATION</h3>
-<table class="table">
+ 
+<!-- <div>
+    <nz-table   [nzPageSize]="5" [nzScroll]="{ x: '100%', y: '240px' }" [nzTemplateMode]="true">
+        <thead >
+            <th nzWidth="600px" [nzLeft]="true">VOITURE</th>
+            <th nzWidth="600px" >START DATE</th>
+            <th nzWidth="600px" >END DATE</th>
+            <th nzWidth="600px" >AVANCEMENT</th> 
+            <th nzWidth="600px" >COST</th> 
+            <th nzWidth="600px" >DESCRIPTION</th>  
+            <th nzWidth="600px" >DESCRIPTION</th> 
+            <th nzWidth="600px" >STATUS</th> 
+            <th nzWidth="600px"  nzRight>ACTION</th> 
+        </thead>
+        <tbody>
+            <tr *ngFor="let r of reparation">
+                <td [nzLeft]="true">{{r.voiture.numero}}</td>
+                <td>{{r.startDate|date:"dd-MM-YYYY"|undefined}}</td>
+                <td>{{r.endDate | date:"dd-MM-YYYY"|undefined}}</td>
+                <td>{{r.avancement}}</td>
+                <td>{{r.cost}}</td>
+                <td>{{r.description}}</td> 
+                <td>{{r.status}}</td>
+                <td nzRight>
+                    <i class="mx-2 bi bi-trash-fill"></i> 
+                    <i class="mx-2 bi bi-pencil-fill"></i>
+                    <i [routerLink]="[r.id,'detail']" class="mx-2 bi bi-eye-fill"></i>
+                </td>
+            </tr>
+        </tbody> 
+    </nz-table>
+</div> -->
+<nz-table #middleTable nzSize="middle" [nzData]="reparation" [nzScroll]="{x:'100%'}" nzBordered nzSize="middle"  class="h-100" nzNoResult="hahahaaha">
     <thead>
-        <tr> 
-            <th>VOITURE</th>
-            <th>START DATE</th>
-            <th>END DATE</th>
-            <th>AVANCEMENT</th> 
-            <th>COST</th> 
-            <th>DESCRIPTION</th> 
-            <th>STATUS</th> 
-        </tr>
+      <tr>
+        <th [nzWidth]="'200px'">VOITURE</th>   
+        <th [nzWidth]="'200px'">START DATE</th>  
+        <th [nzWidth]="'200px'">END DATE</th>  
+        <th [nzWidth]="'200px'">AVANCEMENT</th>  
+        <th [nzWidth]="'200px'">COST</th>  
+        <th [nzWidth]="'200px'">DESCRIPTION</th>  
+        <th [nzWidth]="'200px'">STATUS</th>    
+        <th [nzWidth]="'200px'" [nzRight]="true">ACTION</th>  
+      </tr>
     </thead>
-    <tBody>
-        <tr *ngFor="let r of reparation">
-            <td>{{r.voiture.numero}}</td>
-            <td>{{r.startDate}}</td>
-            <td>{{r.endDate}}</td>
-            <td>{{r.avancement}}</td>
-            <td>{{r.cost}}</td>
-            <td>{{r.description}}</td>
-            <td>{{r.status}}</td>
-            <td [routerLink]="[r.id,'detail']">DETAIL</td>
-        </tr>
-    </tBody>
-</table>
+    <tbody class="h-100 bg-info">
+      <tr *ngFor="let data of middleTable.data"> 
+        <td  class="h-100 bg-danger">{{ data.voiture.numero }}</td> 
+        <td>{{ data.startDate }}</td> 
+        <td>{{ data.endDate }}</td> 
+        <td>{{ data.avancement }}</td> 
+        <td>{{ data.cost }}</td> 
+        <td>{{ data.description }}</td>  
+        <td>{{ data.status }}</td>  
+        <td [nzRight]="true">
+            <i class="mx-2 bi bi-trash-fill"></i> 
+            <i class="mx-2 bi bi-pencil-fill"></i>
+            <i [routerLink]="[data.id,'detail']" class="mx-2 bi bi-eye-fill"></i>
+        </td> 
+
+      </tr>
+    </tbody>
+  </nz-table>  

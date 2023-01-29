@@ -16,6 +16,7 @@ import { ListeClientComponent } from './liste-client/liste-client.component';
 import { LoginClientComponent } from './login-client/login-client.component';
 import { SignupClientComponent } from './signup-client/signup-client.component';
 import { ActiveModule } from 'projects/active/src/src';
+import { ComponentModule } from '../component/component.module';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ActiveModule } from 'projects/active/src/src';
     ClientModule,
     ResponsableModule,
     SharedModule,
-    ActiveModule
+    ActiveModule,
+    ComponentModule
   ],
   exports:[
     ProfilComponent,
