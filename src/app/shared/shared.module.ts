@@ -19,7 +19,6 @@ import { StarRatingModule } from 'angular-star-rating';
     PipeModule, 
     FormsModule,
     ReactiveFormsModule,
-    StarRatingModule.forRoot()
   ],
   exports:[
     CommonModule,
@@ -29,7 +28,6 @@ import { StarRatingModule } from 'angular-star-rating';
     PipeModule,
     FormsModule,
     ReactiveFormsModule,
-    StarRatingModule
   ]
 })
 export class SharedModule { }
