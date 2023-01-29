@@ -1,22 +1,18 @@
 import { form } from "projects/active/src/lib/utils";
 import { NumberComponent, SelectComponent, TextComponent } from "../component/input";
-import { ClientService } from "../page/client/client.service";
 
 export class Voiture{
-
+    id:string;
     @form({
-        label:"Modele Voiture",
+        label:"Modele",
         key:(d:any)=>{
-            const model=d.marqueVoiture;
-            return `${model.marqueName} ${d.modelName}`
+            return `${d.modelName}  -  ${d.marqueVoiture.marqueName}`
         },
         value:(d:any)=>d.id,
         component:SelectComponent,
-        data: (d:any)=>d
+        class:"my-2"
     })
-    modelId:string;
-
-    
+    modeleId:string;
 
     @form({
         label:"Année",
