@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { ReparationService } from '../reparation.service';
+import { ActivatedRoute } from '@angular/router'; 
+import { ReparationService } from '../../service/reparation.service';
 
 @Component({
   selector: 'app-detail-reparation',

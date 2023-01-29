@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClientComponent } from './client.component';
-import { HistoriqueComponent } from './historique/historique.component';
-import { ProfilComponent } from './profil/profil.component';
-import { DetailReparationComponent } from './reparation/detail-reparation/detail-reparation.component';
-import { ReparationSaveComponent } from './reparation/reparation-save/reparation-save.component';
-import { ReparationComponent } from './reparation/reparation.component';
-import { VoitureComponent } from './voiture/voiture.component';
+import { HistoriqueComponent } from '../historique/historique.component';
+import { ProfilComponent } from '../profil/profil.component';
+import { DetailReparationComponent } from '../detail-reparation/detail-reparation.component';
+import { ReparationSaveComponent } from '../reparation-save/reparation-save.component';
+import { ReparationComponent } from '../reparation/reparation.component';
+import { VoitureComponent } from '../voiture/voiture.component';
 
 const routes: Routes = [
   {

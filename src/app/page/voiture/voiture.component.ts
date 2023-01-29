@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Voiture } from 'src/app/entity/Voiture';
-import { ClientComponent } from '../client.component';
-import { ClientService } from '../client.service';
+import { Voiture } from 'src/app/entity/Voiture'; 
 import { getItem } from 'projects/active/src/lib/utils';
+import { ClientComponent } from '../client/client.component';
+import { ClientService } from '../../service/client.service';
 
 @Component({
   selector: 'app-voiture',

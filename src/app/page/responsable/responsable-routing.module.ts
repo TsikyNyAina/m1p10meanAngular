@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MarqueVoitureSaveComponent } from './marque-voiture/marque-voiture-save/marque-voiture-save.component';
-import { ResponsableComponent } from './responsable.component';
-import { MarqueVoitureComponent } from './marque-voiture/marque-voiture.component';
+import { MarqueVoitureSaveComponent } from '../marque-voiture-save/marque-voiture-save.component';
+import { MarqueVoitureComponent } from '../marque-voiture/marque-voiture.component';
+import { ResponsableComponent } from './responsable.component'; 
 
 const routes: Routes = [
   { path:"", component:ResponsableComponent },

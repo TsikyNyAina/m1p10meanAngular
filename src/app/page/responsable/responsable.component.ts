@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ResponsableService } from './responsable.service';
+import { ResponsableService } from '../../service/responsable.service';
 import { Router } from '@angular/router';
 
 @Component({
