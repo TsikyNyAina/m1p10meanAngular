@@ -14,9 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     HttpClientModule,
-    ActiveModule,
-    PageModule,
-    ComponentModule,
+    ActiveModule, 
     DirectiveModule,
     PipeModule, 
     FormsModule,
@@ -25,9 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   exports:[
     CommonModule,
     HttpClientModule,
-    ActiveModule,
-    PageModule,
-    ComponentModule,
+    ActiveModule, 
     DirectiveModule,
     PipeModule,
     FormsModule,

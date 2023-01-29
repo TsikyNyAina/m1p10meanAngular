@@ -12,7 +12,7 @@ export class ProfilComponent implements OnInit {
 
   title = 'clientGarage';
   email: string = "";
-  mdp: string = "";
+  mdp: any = "";
   show: boolean = false;
 
   constructor(private clientService: ClientService, private route: Router) { }
