@@ -38,6 +38,11 @@ export class ClientService {
   insertClient(client: any){
     return this.http.post(`${API_URL}/client`, client).toPromise();
   }
+
+  insertVoiture(voiture: any){
+    return this.http.post(`${API_URL}/voiture`, voiture).toPromise();
+  }
+
   getMarquePiece(){
     return this.http.get(`${API_URL}/marquePiece/option/[]`);
   }

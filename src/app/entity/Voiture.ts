@@ -3,6 +3,8 @@ import { NumberComponent, SelectComponent, TextComponent } from "../component/in
 
 export class Voiture{
     id:string;
+    clientId:string;
+
     @form({
         label:"Modele",
         key:(d:any)=>{
@@ -12,7 +14,7 @@ export class Voiture{
         component:SelectComponent,
         class:"my-2"
     })
-    modeleId:string;
+    modelVoitureId:string;
 
     @form({
         label:"Année",
@@ -23,5 +25,5 @@ export class Voiture{
         label:"Numero d'immatriculation",
         component:TextComponent
     })
-    number:number;
+    numero:number;
 }

@@ -18,12 +18,21 @@ export class VoitureComponent implements OnInit {
     this.clientService.getModeleVoiture().subscribe((modele:any)=>{
       console.log(modele);
       
-      getItem(this.voiturei).modeleId.data=modele 
+      getItem(this.voiturei).modelVoitureId.data=modele 
     });
     
   } 
 
   ngOnInit(): void {
+  }
+
+  submit(){
+    this.voiturei.clientId = this.clientComponent.clientId;
+    this.clientService.insertVoiture(this.voiturei).then(voiture=>{
+      console.log(voiture);
+    }).catch(error => {
+      console.log(error);
+    });
   }
 
 }
