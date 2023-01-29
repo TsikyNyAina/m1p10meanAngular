@@ -31,7 +31,7 @@
         </tbody> 
     </nz-table>
 </div> -->
-<nz-table #middleTable nzBordered nzSize="middle" [nzData]="reparation" [nzScroll]="{x:'100%',y:'100%'}" nzBordered nzSize="middle"  class="h-100" nzNoResult="hahahaaha">
+<nz-table #middleTable nzBordered nzSize="middle" [nzData]="reparation" [nzScroll]="{x:'100%',y:'100%'}" nzBordered   nzEllipsis="zzz">
     <thead>
       <tr>
         <th [nzWidth]="'200px'">VOITURE</th>   
@@ -44,7 +44,7 @@
         <th [nzWidth]="'200px'" [nzRight]="true">ACTION</th>  
       </tr>
     </thead>
-    <tbody class="h-100 bg-info">
+    <tbody class="h-100">
       <tr *ngFor="let data of middleTable.data"> 
         <td  class="h-100 bg-danger">{{ data.voiture.numero }}</td> 
         <td>{{ data.startDate }}</td> 
