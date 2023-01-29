@@ -13,6 +13,8 @@ import { MarqueVoitureSaveComponent } from './marque-voiture-save/marque-voiture
 import { SharedModule } from '../shared/shared.module';
 import { MarquePieceComponent } from './marque-piece/marque-piece.component';
 import { ListeClientComponent } from './liste-client/liste-client.component';
+import { LoginClientComponent } from './login-client/login-client.component';
+import { SignupClientComponent } from './signup-client/signup-client.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { ListeClientComponent } from './liste-client/liste-client.component';
     MarqueVoitureComponent,
     MarqueVoitureSaveComponent,
     MarquePieceComponent,
-    ListeClientComponent, 
+    ListeClientComponent,
+    LoginClientComponent,
+    SignupClientComponent, 
   ],
   imports: [
     CommonModule,

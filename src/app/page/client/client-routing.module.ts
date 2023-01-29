@@ -8,6 +8,8 @@ import { ReparationSaveComponent } from '../reparation-save/reparation-save.comp
 import { ReparationComponent } from '../reparation/reparation.component';
 import { VoitureComponent } from '../voiture/voiture.component';
 import { ListeClientComponent } from '../liste-client/liste-client.component';
+import { LoginClientComponent } from '../login-client/login-client.component';
+import { SignupClientComponent } from '../signup-client/signup-client.component';
 
 const routes: Routes = [
   {
@@ -15,6 +17,8 @@ const routes: Routes = [
     component:ClientComponent,
     children:[
       {path:"profile",component:ProfilComponent},
+      {path:"loginClient",component:LoginClientComponent},
+      {path:"signupClient",component:SignupClientComponent},
       {path:"voiture",component:VoitureComponent},
       {path:"clients",component:ListeClientComponent},
       {path:"historique",component:HistoriqueComponent},

@@ -1,0 +1,25 @@
+<div>
+
+    <h5><u><i>Inscription</i></u></h5>
+    <form class="example-form">
+        <label>Nom client</label>
+        <input placeholder="Entrez votre email" type="text" name="email" [(ngModel)]="nom" required>
+
+        <label>Email</label>
+        <input placeholder="Entrez votre email" type="email" name="email" [(ngModel)]="email" required>
+
+        <label>Numéro de telephone</label>
+        <input placeholder="Entrez votre email" name="email" type="number" [(ngModel)]="numero" required>
+
+        <label>Mot de passe </label>
+        <input placeholder="Enter your password" value="" name="mdp" type="password" [(ngModel)]="mdp1" required>
+
+        <label>Confirmation mot de passe</label>
+        <input placeholder="Enter your password" value="" name="mdp" type="password" [(ngModel)]="mdp2" required>
+
+        <button color="primary" (click)="inscription()">Inscription</button>
+        <span *ngIf="show1"> Verifiez le mot de passe</span>
+        <span *ngIf="mesError"> {{mesError}} </span>
+    </form>
+    <a [routerLink]="['/loginClient']">Login </a>
+</div>
