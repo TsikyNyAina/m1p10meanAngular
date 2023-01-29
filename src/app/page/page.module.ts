@@ -31,7 +31,7 @@ import { ActiveModule } from 'projects/active/src/src';
     MarquePieceComponent,
     ListeClientComponent,
     LoginClientComponent,
-    SignupClientComponent, 
+    SignupClientComponent
   ],
   imports: [
     CommonModule,

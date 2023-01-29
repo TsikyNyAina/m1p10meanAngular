@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Client } from 'src/app/entity';
 import { ClientService } from '../../service';
 
 @Component({
@@ -9,11 +10,7 @@ import { ClientService } from '../../service';
 })
 export class SignupClientComponent implements OnInit {
 
-  nom: string = "";
-  email: string = "";
-  numero: string = "";
-  mdp1: string = "";
-  mdp2: string = "";
+  client = new Client();
   show1: boolean = false;
   
   mesError: string = "";
@@ -23,9 +20,8 @@ export class SignupClientComponent implements OnInit {
   }
 
   async inscription() {
-    if (this.mdp1 === this.mdp2) {
-      let client = { name: this.nom, phoneNumber: this.numero.toString(), email: this.email, mdp: this.mdp1 };
-      let response = this.clientService.insertClient(client);
+      //let client = { name: this.nom, phoneNumber: this.numero.toString(), email: this.email, mdp: this.mdp1 };
+      let response = this.clientService.insertClient(this.client);
       response.then((data:any) => {
         let id = data.id;
         if(id!=undefined){
@@ -33,14 +29,11 @@ export class SignupClientComponent implements OnInit {
         }
       })
       .catch(error => {
+        this.show1 = true;
         this.mesError = error.toString;
       });
      
 
-
-    } else {
-      this.show1 = true;
-    }
   }
 
 }
