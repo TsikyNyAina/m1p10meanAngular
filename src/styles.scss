@@ -6,14 +6,12 @@
 .bi{
     font-size: 18px;
 }
-star-rating *{  
-    margin-bottom: 0 !important;
-    text-align: start;
-    display: inline;
+.container,body,html{
+    min-height:100vh
 }
-.star-container {
-    justify-content:start;
-}
-.rating{
-    display: inline;    
-}
+
+
+
+.ant-table-body{
+    min-height:600px!important;
+} 
