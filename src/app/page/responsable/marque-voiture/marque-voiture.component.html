@@ -1,1 +1,14 @@
-<p>marque-voiture works!</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>MARQUE</th>
+            <th>Id</th>
+        </tr>
+    </thead>
+    <tBody>
+        <tr *ngFor="let v of marqueVoiture">
+            <td>{{v.marqueName}}</td>
+            <td [routerLink]="[v.id]">{{v.id}}</td>
+        </tr>
+    </tBody>
+</table>

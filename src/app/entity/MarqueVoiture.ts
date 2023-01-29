@@ -10,5 +10,4 @@ export class MarqueVoiture{
         validator:Validators.required
     })
     marqueName:string;
-
 }

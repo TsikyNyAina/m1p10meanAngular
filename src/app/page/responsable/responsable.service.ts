@@ -17,4 +17,8 @@ export class ResponsableService {
     return this.http.get(`${API_URL}/responsableController/option/${JSON.stringify(match)}`)
   }
 
+  getMarqueVoiture(){
+    return this.http.get(`${API_URL}/marqueVoiture/option/[]`);
+  }
+
 }
