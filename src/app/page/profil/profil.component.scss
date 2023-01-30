@@ -1,6 +1,6 @@
 .title{
-    height:8rem;
-    padding-top: 1rem;
+    // height:8rem;
+    // padding-top: 1rem;
     position: sticky;
     top: 0;
     left: 0;
@@ -9,6 +9,8 @@
     z-index: 100;
     .tt{
         font-size: 3rem;
+        vertical-align: top;
+        margin-top: -1rem;
     }
     .date{
         color:#8b8b8b
