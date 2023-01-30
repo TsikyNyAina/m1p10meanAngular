@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { Reparation } from '../entity';
 
 const API_URL=environment.APi_URL
 
@@ -34,6 +35,8 @@ export class ReparationService {
     return this.http.get(`${API_URL}/reparation/option/[]`)
   }
   getReparationDetailByReparationId(reparationId:string){
+    console.log(reparationId);
+    
     const param=[
       {
         $match:{
@@ -55,5 +58,10 @@ export class ReparationService {
     ]
     return this.http.get(`${API_URL}/reparation/option/${JSON.stringify(param)}`)
   }
-
+  saveReparation(reparation:Reparation){
+    return this.http.post(`${API_URL}/reparation`,reparation)
+  }
+  deleteReparation(reparationId:string){
+    return this.http.delete(`${API_URL}/reparation/${reparationId}`)
+  }
 }

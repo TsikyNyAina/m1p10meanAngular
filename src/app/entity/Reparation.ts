@@ -2,9 +2,11 @@ import { InlineFormComponent } from "projects/active/src/lib/component/inline-fo
 import { form } from "projects/active/src/lib/utils";
 import { NumberComponent, SelectComponent, StarComponent, TextComponent } from "../component/input";
 import { DateComponent } from "../component/input/date/date.component";
+import { DetailReparation } from "./DetailReparation";
 
 export class Reparation{
     id:string;
+    reparationDetail:DetailReparation[]
     @form({
         label:"Voiture",
         key:(d:any)=>{

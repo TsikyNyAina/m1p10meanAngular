@@ -13,7 +13,11 @@ export class DetailReparationComponent implements OnInit {
 
   constructor(private reparationService:ReparationService,private activatedRoute:ActivatedRoute) {
     this.reparationId=this.activatedRoute.snapshot.params.id;
-    this.reparationService.getReparationDetailByReparationId(this.reparationId).subscribe((data:any)=> this.detailReparation=data)
+    this.reparationService.getReparationDetailByReparationId(this.reparationId).subscribe((data:any)=> {
+
+      this.detailReparation=data;
+      console.log(data,"eeae")
+    })
     
     
 

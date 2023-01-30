@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';  
 import { ClientComponent } from '../client/client.component';
 import { ReparationService } from '../../service'; 
+import { Reparation } from 'src/app/entity';
 
 
 @Component({
@@ -24,5 +25,10 @@ export class ReparationComponent implements OnInit {
   JSON=JSON
   ngOnInit(): void {
   }
-
+  deleteReparation(reparation:Reparation){
+    this.reparationService.deleteReparation(reparation.id).subscribe(()=>{
+      this.reparation.splice(this.reparation.indexOf(reparation),1);
+      this.reparation=[...this.reparation]
+    })
+  }
 }

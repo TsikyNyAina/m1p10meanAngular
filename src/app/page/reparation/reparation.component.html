@@ -22,7 +22,7 @@
         <td>{{ data.description }}</td>  
         <td>{{ data.status }}</td>  
         <td [nzRight]="true">
-            <i class="mx-2 bi bi-trash-fill"></i> 
+            <i (click)="deleteReparation(data)" class="mx-2 bi bi-trash-fill"></i> 
             <i class="mx-2 bi bi-pencil-fill"></i>
             <i [routerLink]="[data.id,'detail']" class="mx-2 bi bi-eye-fill"></i>
         </td> 

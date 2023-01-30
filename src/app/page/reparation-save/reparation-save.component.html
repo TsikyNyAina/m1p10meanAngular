@@ -38,25 +38,26 @@
             </tbody>
     
         </table> -->
-        <nz-table #middleTable nzBordered nzSize="middle" [nzData]="detailReparation" [nzScroll]="{x:'100%',y:'100%'}" nzBordered nzSize="middle"  class="h-100" nzNoResult="hahahaaha">
+        <nz-table #middleTable nzBordered nzSize="middle" [nzData]="detailReparation" [nzScroll]="{x:'100%',y:'100%'}" nzBordered nzSize="middle"  class="h-100"  >
             <thead>
                 <tr> 
                     <th [nzWidth]="'200px'">Piece</th>   
-                    <th [nzWidth]="'200px'">Etat</th>   
+                    <th [nzWidth]="'300px'">Etat</th>   
                     <th [nzWidth]="'200px'">Quantity</th>   
                     <th [nzWidth]="'200px'">Prix</th>   
+                    <th [nzWidth]="'200px'">ACTION</th>   
                 </tr>
             </thead>
             <tbody >
-                <tr [form]="data" *ngFor="let data of middleTable.data">
+                <tr [form]="data" *ngFor="let data of middleTable.data ">
                     <td class="ps-0" id="0"></td>
                     <td class="ps-0" id="1"></td>
                     <td class="ps-0" id="2"></td>
                     <td class="ps-0" id="3"></td>
                     <td class="text-center align-middle" >
-                        <i class="mx-2 bi bi-trash-fill text-danger"></i> 
+                        <i (click)="deleteDetail(data)" class="mx-2 bi bi-trash-fill text-danger"></i> 
                         <i class="mx-2 bi bi-pencil-fill text-primary"></i>
-                        <i class="mx-2 bi bi-eye-fill text-success"></i>
+                        <i class="mx-2 bi bi-eye-fill text-success"></i> 
                     </td>
                 </tr>
             </tbody>

@@ -2,6 +2,7 @@ import { form } from "projects/active/src/lib/utils";
 import { NumberComponent, SelectComponent, StarComponent } from "../component/input";
 
 export class DetailReparation{
+    id:string;
     reparationId:string;
     @form({
         key:(d:any)=>`${d.marquePieceName}` ,
