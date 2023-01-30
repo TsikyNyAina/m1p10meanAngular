@@ -9,7 +9,7 @@ import { ClientService } from '../../service';
   providers: [ClientService]
 })
 export class ProfilComponent implements OnInit {
-
+  date=new Date()
   constructor(private clientService: ClientService, private route: Router) { }
 
 

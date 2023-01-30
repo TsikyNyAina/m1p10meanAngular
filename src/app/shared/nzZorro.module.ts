@@ -8,7 +8,9 @@ import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 import { NzTableModule } from 'ng-zorro-antd/table';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzTabsModule } from 'ng-zorro-antd/tabs';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -21,7 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NzInputModule,
     NzInputNumberModule,
     NzTableModule,
-    // BrowserAnimationsModule,
+    NzModalModule,
+    NzTabsModule,
   ],
   exports:[
     CommonModule,
@@ -33,6 +36,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NzInputModule,
     NzInputNumberModule,
     NzTableModule,
+    NzModalModule,
+    NzTabsModule,
   ]
 })
 export class NzZorroModule { }

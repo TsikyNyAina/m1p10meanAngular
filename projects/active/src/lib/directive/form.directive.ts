@@ -18,8 +18,7 @@ export class FormDirective {
   ngOnInit(){
     this.keys=getStore(this.form.constructor.prototype)||[]
     const initialValue:any={};
-    for(let key of this.keys){ 
-      
+    for(let key of this.keys){  
       const item=getItem(this.form)[key]; 
       initialValue[key]=[this.form[key]||item.value,item.validator]
     }
@@ -46,7 +45,7 @@ export class FormDirective {
             newElement.instance.formControlName=key
             newElement.instance.model=this.form
             
-            let value=undefined as any;
+            let value=this.form[key] as any;
             Object.defineProperty(this.form,key,{
               set:(arg)=>{
                 value=arg

@@ -16,7 +16,6 @@ export class ReparationService {
 
   getReparationById(reparationId:string){
     return this.http.get(`${API_URL}/reparation/${reparationId}`)
-
   }
 
   getReparationByVoitureId(voitureId:string){

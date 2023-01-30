@@ -13,6 +13,7 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
 import { SwitchComponent } from './input/switch/switch.component';
 import { DateComponent } from './input/date/date.component';
 import { TableComponent } from './table/table.component';
+import { MenuComponent } from './menu/menu.component';
 @NgModule({
   declarations: [
     TextComponent,
@@ -21,7 +22,8 @@ import { TableComponent } from './table/table.component';
     StarComponent,
     SwitchComponent,
     DateComponent,
-    TableComponent
+    TableComponent,
+    MenuComponent
   ],
   imports: [
     CommonModule,
@@ -35,7 +37,8 @@ import { TableComponent } from './table/table.component';
     StarComponent,
     SwitchComponent,
     DateComponent,
-    TableComponent
+    TableComponent,
+    MenuComponent
     
   ] 
 })

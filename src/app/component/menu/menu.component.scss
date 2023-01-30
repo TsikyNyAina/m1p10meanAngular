@@ -1,0 +1,26 @@
+.menu-container{
+    background-color: #fff;
+    position: sticky;
+    top:0;
+    left: 0;
+    b,.bi{
+        font-size: 20px;
+    }
+}
+.menu-bar{
+    background-color: #0c1f2b;
+    height: calc(100% - 8rem );
+    border-top-right-radius: 39% 127px;
+    animation-name: anim-round-border;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes anim-round-border {
+    0%{
+        border-top-right-radius: 0;
+    };
+    100%{
+        border-top-right-radius: 39% 127px;
+    }
+    
+}

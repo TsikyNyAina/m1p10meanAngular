@@ -17,7 +17,7 @@ export class DetailReparationComponent implements OnInit {
     private detailReparationService:DetailReparationService
   ) {
     this.reparationId=this.activatedRoute.snapshot.params.id;
-    this.detailReparationService.getReparationDetailByReparationId(this.reparationId).subscribe((data:any)=> this.detailReparation=data)
+    this.detailReparationService.getReparationDetailByReparationId(this.reparationId).subscribe((data:any)=> console.log(this.detailReparation=data))
     
     
 

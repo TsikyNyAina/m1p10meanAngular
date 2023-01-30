@@ -4,6 +4,7 @@ import { ClientComponent } from './client.component';
 import { ClientRoutingModule } from './client-routing.module'; 
 import { SharedModule } from 'src/app/shared/shared.module'; 
 import { ActiveModule } from 'projects/active/src/src';
+import { ComponentModule } from 'src/app/component/component.module';
 
 
 
@@ -16,11 +17,13 @@ import { ActiveModule } from 'projects/active/src/src';
     CommonModule,
     ClientRoutingModule,
     ActiveModule,
-    SharedModule
+    SharedModule,
+    ComponentModule
   ],
   exports:[
     CommonModule, 
-    ClientRoutingModule
+    ClientRoutingModule,
+    ClientComponent
   ]
 })
 export class ClientModule { }
