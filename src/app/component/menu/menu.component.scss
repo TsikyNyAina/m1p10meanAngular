@@ -3,7 +3,7 @@
     position: sticky;
     top:0;
     left: 0;
-    b,.bi{
+    b,.logo{
         font-size: 20px;
     }
 }
@@ -14,6 +14,14 @@
     animation-name: anim-round-border;
     animation-duration: 2s;
     animation-iteration-count: 1;
+    .bi{
+        color: #838383;
+        transition: .3s;
+    }
+    .bi:hover{
+        color:white;
+        font-size: 22px;
+    }
 }
 @keyframes anim-round-border {
     0%{

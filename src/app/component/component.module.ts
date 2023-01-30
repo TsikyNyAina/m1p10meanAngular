@@ -14,6 +14,7 @@ import { SwitchComponent } from './input/switch/switch.component';
 import { DateComponent } from './input/date/date.component';
 import { TableComponent } from './table/table.component';
 import { MenuComponent } from './menu/menu.component';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     TextComponent,
@@ -28,7 +29,8 @@ import { MenuComponent } from './menu/menu.component';
   imports: [
     CommonModule,
     ActiveModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ],
   exports:[ 
     TextComponent,
