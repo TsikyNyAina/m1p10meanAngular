@@ -16,6 +16,7 @@ import { PageModule } from './page/page.module';
 import { PipeModule } from './pipe/pipe.module';
 import { DirectiveModule } from './directive/directive.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [
     AppComponent
@@ -32,7 +33,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ComponentModule,
     DirectiveModule,
     BrowserAnimationsModule,
-    PipeModule
+    PipeModule,
+    ChartsModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

@@ -9,9 +9,11 @@ import { AchatPieceComponent } from '../achat-piece/achat-piece.component';
 import { AchatPieceSaveComponent } from '../achat-piece-save/achat-piece-save.component';
 import { SalaireSaveComponent } from '../salaire-save/salaire-save.component';
 import { SalaireComponent } from '../salaire/salaire.component';
+import { StatComponent } from '../stat/stat.component';
 
 const routes: Routes = [
   { path:"", component:ResponsableComponent },
+  { path:"stat", component: StatComponent},
   { path:"loyer", component:LoyerComponent },
   { path:"marqueVoiture/save", component:MarqueVoitureSaveComponent },
   { path:"marqueVoiture", component:MarqueVoitureComponent },

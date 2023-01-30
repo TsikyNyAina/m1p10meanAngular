@@ -24,6 +24,7 @@ import { LoyerComponent } from './loyer/loyer.component';
 import { SalaireComponent } from './salaire/salaire.component'; 
 import { SalaireSaveComponent } from './salaire-save/salaire-save.component';
 import { VoitureSaveComponent } from './voiture-save/voiture-save.component';
+import { StatComponent } from './stat/stat.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { VoitureSaveComponent } from './voiture-save/voiture-save.component';
     // LoyerSaveComponent,
     SalaireComponent,
     SalaireSaveComponent,
-    VoitureSaveComponent
+    VoitureSaveComponent,
+    StatComponent
   ],
   imports: [
     CommonModule,

@@ -4,6 +4,7 @@ import { ResponsableComponent } from './responsable.component';
 import { ResponsableRoutingModule } from './responsable-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ActiveModule } from 'projects/active/src/src'; 
+import { ChartsModule } from 'ng2-charts';
 
 
 
@@ -16,7 +17,8 @@ import { ActiveModule } from 'projects/active/src/src';
     CommonModule,
     ResponsableRoutingModule,
     ActiveModule,
-    SharedModule
+    SharedModule,
+    ChartsModule
   ],
   exports:[
     ResponsableComponent, 
