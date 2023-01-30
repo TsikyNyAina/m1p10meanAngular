@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ClientComponent } from '../client/client.component';
 import { ReparationService } from '../../service'; 
 import { Reparation } from 'src/app/entity';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -14,9 +15,12 @@ export class ReparationComponent implements OnInit {
   reparation:Array<any>=new Array();
   clientId:string;
   constructor(
+    private activatedRoute:ActivatedRoute,
     private reparationService:ReparationService,
     private clientComponent:ClientComponent
   ) { 
+
+    
     this.clientId=this.clientComponent.clientId
     this.reparationService.getAllReparation().subscribe((m:any)=>this.reparation=m)
     this.reparationService.getReparationByClientId(this.clientId).subscribe(console.log)

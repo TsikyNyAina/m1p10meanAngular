@@ -11,28 +11,17 @@ import { ClientService } from '../../service';
 })
 export class VoitureComponent implements OnInit {
   voiture:Array<any>=new Array();
-  voiturei = new Voiture();
+  
 
   constructor(private clientComponent:ClientComponent,private clientService:ClientService) {  
     this.clientService.getAllVoiture().subscribe((voiture:any)=>console.dir(this.voiture=voiture))
-    this.clientService.getModeleVoiture().subscribe((modele:any)=>{
-      console.log(modele);
-      
-      getItem(this.voiturei).modelVoitureId.data=modele 
-    });
+    
     
   } 
 
   ngOnInit(): void {
   }
 
-  submit(){
-    this.voiturei.clientId = this.clientComponent.clientId;
-    this.clientService.insertVoiture(this.voiturei).then(voiture=>{
-      console.log(voiture);
-    }).catch(error => {
-      console.log(error);
-    });
-  }
+ 
 
 }

@@ -12,6 +12,15 @@ export class DetailReparationService {
   deleteDetailReparation(detailReparationId:string){
     return this.http.delete(`${API_URL}/reparationDetail/${detailReparationId}`);
   }
-
+  getReparationDetailByReparationId(reparationId:string){ 
+    const param=[
+      {
+        $match:{
+          reparationId:reparationId
+        }
+      }
+    ]
+    return this.http.get(`${API_URL}/reparationDetail/option/${JSON.stringify(param)}`)
+  }
 
 }

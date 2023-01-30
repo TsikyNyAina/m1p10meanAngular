@@ -13,6 +13,12 @@ const API_URL=environment.APi_URL
 export class ReparationService {
 
   constructor(private http:HttpClient) { }
+
+  getReparationById(reparationId:string){
+    return this.http.get(`${API_URL}/reparation/${reparationId}`)
+
+  }
+
   getReparationByVoitureId(voitureId:string){
     const param=[
       {
@@ -34,18 +40,7 @@ export class ReparationService {
   getAllReparation(){
     return this.http.get(`${API_URL}/reparation/option/[]`)
   }
-  getReparationDetailByReparationId(reparationId:string){
-    console.log(reparationId);
-    
-    const param=[
-      {
-        $match:{
-          reparationId:reparationId
-        }
-      }
-    ]
-    return this.http.get(`${API_URL}/reparationDetail/option/${JSON.stringify(param)}`)
-  }
+  
   getReparationByClientId(clientId:string){
     console.log(clientId);
     
@@ -60,6 +55,9 @@ export class ReparationService {
   }
   saveReparation(reparation:Reparation){
     return this.http.post(`${API_URL}/reparation`,reparation)
+  }
+  updateReparation(reparation:Reparation){
+    return this.http.put(`${API_URL}/reparation`,reparation)
   }
   deleteReparation(reparationId:string){
     return this.http.delete(`${API_URL}/reparation/${reparationId}`)

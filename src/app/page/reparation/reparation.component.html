@@ -1,4 +1,11 @@
 
+
+
+<div class="row my-3">
+  <div class="col text-end">
+      <button [routerLink]="'save'" nz-button nzType="primary">save</button>
+  </div>
+</div>
 <nz-table #middleTable nzBordered nzSize="middle" [nzData]="reparation" [nzScroll]="{ x: '1150px', y: '100%' }" nzBordered    >
     <thead>
       <tr>
@@ -23,7 +30,7 @@
         <td>{{ data.status }}</td>  
         <td [nzRight]="true">
             <i (click)="deleteReparation(data)" class="mx-2 bi bi-trash-fill"></i> 
-            <i class="mx-2 bi bi-pencil-fill"></i>
+            <i [routerLink]="[data.id,'edit']" class="mx-2 bi bi-pencil-fill"></i>
             <i [routerLink]="[data.id,'detail']" class="mx-2 bi bi-eye-fill"></i>
         </td> 
 

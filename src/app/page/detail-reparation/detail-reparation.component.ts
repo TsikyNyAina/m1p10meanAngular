@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'; 
-import { ReparationService } from '../../service';
+import { DetailReparationService, ReparationService } from '../../service';
 
 @Component({
   selector: 'app-detail-reparation',
@@ -11,13 +11,13 @@ export class DetailReparationComponent implements OnInit {
   detailReparation:Array<any>=new Array()
   reparationId:string;
 
-  constructor(private reparationService:ReparationService,private activatedRoute:ActivatedRoute) {
+  constructor(
+    private reparationService:ReparationService,
+    private activatedRoute:ActivatedRoute,
+    private detailReparationService:DetailReparationService
+  ) {
     this.reparationId=this.activatedRoute.snapshot.params.id;
-    this.reparationService.getReparationDetailByReparationId(this.reparationId).subscribe((data:any)=> {
-
-      this.detailReparation=data;
-      console.log(data,"eeae")
-    })
+    this.detailReparationService.getReparationDetailByReparationId(this.reparationId).subscribe((data:any)=> this.detailReparation=data)
     
     
 

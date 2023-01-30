@@ -23,6 +23,7 @@ import { LoyerComponent } from './loyer/loyer.component';
 // import { LoyerSaveComponent } from './loyer-save/loyer-save.component';
 import { SalaireComponent } from './salaire/salaire.component'; 
 import { SalaireSaveComponent } from './salaire-save/salaire-save.component';
+import { VoitureSaveComponent } from './voiture-save/voiture-save.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { SalaireSaveComponent } from './salaire-save/salaire-save.component';
     LoyerComponent,
     // LoyerSaveComponent,
     SalaireComponent,
-    SalaireSaveComponent
+    SalaireSaveComponent,
+    VoitureSaveComponent
   ],
   imports: [
     CommonModule,
@@ -72,7 +74,8 @@ import { SalaireSaveComponent } from './salaire-save/salaire-save.component';
     LoyerComponent,
     // LoyerSaveComponent,
     SalaireComponent,
-    SalaireSaveComponent
+    SalaireSaveComponent,
+    VoitureSaveComponent
   ]
 })
 export class PageModule { }

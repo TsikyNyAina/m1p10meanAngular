@@ -21,7 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NzInputModule,
     NzInputNumberModule,
     NzTableModule,
-    BrowserAnimationsModule,
+    // BrowserAnimationsModule,
   ],
   exports:[
     CommonModule,

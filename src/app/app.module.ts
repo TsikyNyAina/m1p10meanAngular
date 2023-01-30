@@ -15,6 +15,7 @@ import { ComponentModule } from './component/component.module';
 import { PageModule } from './page/page.module';
 import { PipeModule } from './pipe/pipe.module';
 import { DirectiveModule } from './directive/directive.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent
@@ -30,6 +31,7 @@ import { DirectiveModule } from './directive/directive.module';
     PageModule,
     ComponentModule,
     DirectiveModule,
+    BrowserAnimationsModule,
     PipeModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
