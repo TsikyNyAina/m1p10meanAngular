@@ -18,4 +18,12 @@ export class ListeClientComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  envoyer(mail: any){
+    this.clientService.envoyermail(mail).then((m:any)=>{
+      alert(m.message);
+    }).catch(error=>{
+      alert("email non envoyer");
+    });
+  }
+
 }

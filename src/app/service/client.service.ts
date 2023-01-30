@@ -48,6 +48,11 @@ export class ClientService {
     return this.http.post(`${API_URL}/client`, client).toPromise();
   }
 
+  envoyermail(mail: any){
+    let body : any;
+    return this.http.post(`${API_URL}/client/${mail}`, body).toPromise();
+  }
+
   insertVoiture(voiture: any){
     return this.http.post(`${API_URL}/voiture`, voiture).toPromise();
   }
