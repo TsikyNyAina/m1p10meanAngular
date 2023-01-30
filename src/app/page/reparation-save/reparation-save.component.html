@@ -1,55 +1,52 @@
 <div   class="row">
-    <div  class="col" [form]="reparation"> 
+    <div  class="col-md-7" [form]="reparation"> 
         <div class="row" id="0"></div>
-    </div>
-</div>
-
-
-
-
-<!-- <div   class="row my-5" >
-    <h3 class="col">
-        Detail Reparation
-    </h3> 
-    <div class="col-md-12"> 
-        <div class="row text-end my-3">
-            <div class="col">
-                <button (click)="addDetail()" nz-button nzType="primary">Add Detail</button> 
+        
+        <div class="row">
+            <div class="col text-center">
+                <div class="drag my-4">
+                    <h3>DRAG HERE TO ADD ITEM</h3>
+                </div>
             </div>
-        </div> 
-        <nz-table #middleTable nzBordered nzSize="middle" [nzData]="detailReparation" [nzScroll]="{x:'100%',y:'100%'}" nzBordered nzSize="middle"  class="h-100"  >
+        </div>
+        
+        <table class="table">
             <thead>
                 <tr> 
-                    <th [nzWidth]="'200px'">Piece</th>   
-                    <th [nzWidth]="'300px'">Etat</th>   
-                    <th [nzWidth]="'200px'">Quantity</th>   
-                    <th [nzWidth]="'200px'">Prix</th>   
-                    <th [nzWidth]="'200px'">ACTION</th>   
+                    <th>Piece</th>   
+                    <th>Etat</th>   
+                    <th style="width:100px">Quantity</th>   
+                    <th style="width:100px">Prix</th>   
+                    <th>ACTION</th>   
                 </tr>
             </thead>
             <tbody >
-                <tr [form]="data" *ngFor="let data of middleTable.data ">
+                <tr [form]="data" *ngFor="let data of detailReparation ">
                     <td class="ps-0" id="0"></td>
                     <td class="ps-0" id="1"></td>
                     <td class="ps-0" id="2"></td>
                     <td class="ps-0" id="3"></td>
                     <td class="text-center align-middle" >
-                        <i (click)="deleteDetail(data)" class="mx-2 bi bi-trash-fill text-danger"></i> 
-                        <i class="mx-2 bi bi-pencil-fill text-primary"></i>
-                        <i class="mx-2 bi bi-eye-fill text-success"></i> 
+                        <i (click)="deleteDetail(data)" class="mx-2 bi bi-trash-fill"></i> 
+                        <i class="mx-2 bi bi-pencil-fill"></i>
+                        <i class="mx-2 bi bi-eye-fill"></i> 
                     </td>
                 </tr>
             </tbody>
-        </nz-table>
-    </div>
-</div> -->
+        </table>
+        
+        
+        <div class="row">
+            <div class="col text-end">
+                <button (click)="submit()" nz-button nzType="primary">{{reparation.id?"update":"save"}}</button>
+            </div>
+        </div>
 
-
-
-
-
-<div class="row my-3">
-    <div class="col text-end">
-        <button (click)="submit()" nz-button nzType="primary">{{reparation.id?"update":"save"}}</button>
     </div>
 </div>
+
+
+ 
+
+
+
