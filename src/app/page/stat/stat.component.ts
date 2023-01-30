@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Chart } from 'chart.js';
+import { RessourceService } from 'src/app/service';
 
 @Component({
   selector: 'app-stat',
@@ -7,60 +7,42 @@ import { Chart } from 'chart.js';
   styleUrls: ['./stat.component.scss']
 })
 export class StatComponent implements OnInit {
-  chart = [];
+  loyer : Number;
+  salaire : Number;
+  achatPiece : Number;
+  total : Number;
 
-  constructor() { 
+  entree : Number;
+  benefice : Number;
+
+  constructor(private resourceService : RessourceService) { 
     
+   
+
   }
 
   ngOnInit(): void {
+    this.resourceService.getLoyer().subscribe((client:any)=>{
+      this.loyer=client.total;
+      this.resourceService.getSalaire().subscribe((salaire:any)=>{
+        this.salaire=salaire.total;
+        this.resourceService.getAchatPiece().subscribe((piece:any)=>{
+          this.achatPiece=piece.total;
+          this.total =+this.achatPiece + +this.loyer + +this.salaire; 
+          this.resourceService.getPayement().subscribe((payement:any)=>{
+            this.entree=payement.total;
+            this.benefice =+this.entree - +this.total; 
+          });
+        });
+      });
+    });
+
+    
+
     
   }
 
   ngAfterViewInit(){
-    new Chart('myChart', {
-      type: 'line',
-      data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-        datasets: [{
-          label: 'My First dataset',
-          data: [65, 59, 80, 81, 56, 55, 40],
-          fill: false,
-          borderColor: '#4bc0c0'
-        }]
-      },
-      options: {
-        responsive: true,
-        title: {
-          display: true,
-          text: 'Chart.js Line Chart'
-        },
-        tooltips: {
-          mode: 'index',
-          intersect: false,
-        },
-        hover: {
-          mode: 'nearest',
-          intersect: true
-        },
-        scales: {
-          xAxes: [{
-            display: true,
-            scaleLabel: {
-              display: true,
-              labelString: 'Month'
-            }
-          }],
-          yAxes: [{
-            display: true,
-            scaleLabel: {
-              display: true,
-              labelString: 'Value'
-            }
-          }]
-        }
-      }
-    });
   }
 
 }
