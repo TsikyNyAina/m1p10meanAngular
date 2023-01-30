@@ -19,9 +19,12 @@
     min-height:75vh!important;
 } 
 .app-menu{
-    height: 100vh;
+    height: calc(100vh - 3rem);
     display: block;
 }
 *{
     color:#0c1f2b;
+}
+.footer{
+    height:3rem
 }
