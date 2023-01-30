@@ -42,6 +42,11 @@ export class ReparationSaveComponent{
         
         
       })
+
+      this.marquePieceService.getMarquePiece().subscribe((data:any)=>{
+        this.marquePiece=data
+        console.log(this.marquePiece)
+      })
     }
   } 
 

@@ -43,6 +43,28 @@
         </div>
 
     </div>
+    <div  class="col-md-5"> 
+        <table class="table">
+            <thead>
+                <tr> 
+                    <th>Piece</th> 
+                    <th>Modele de voiture</th>   
+                </tr>
+            </thead>
+            <tbody >
+                <tr *ngFor="let data of marquePiece ">
+                    <td class="ps-0">{{data.marquePieceName}}</td>
+                    <td class="ps-0">{{data.modelVoiture.modelName}}</td>
+                    <td class="text-center align-middle" >
+                        <i class="mx-2 bi bi-trash-fill"></i> 
+                        <i class="mx-2 bi bi-pencil-fill"></i>
+                        <i class="mx-2 bi bi-eye-fill"></i> 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 </div>
 
 
