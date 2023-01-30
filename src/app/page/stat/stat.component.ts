@@ -61,7 +61,6 @@ export class StatComponent implements OnInit {
         }
       }
     });
-
   }
 
 }

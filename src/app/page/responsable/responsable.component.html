@@ -1,17 +1,16 @@
-
-    <div>
-      <h5><u><i>Login Form For Responsable</i></u></h5>
-      <form class="example-form">
-        <label>Email</label>
-        <input placeholder="Entrez votre email" name="email" [(ngModel)]="responsable.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-        <div *ngIf="!responsable.isValidMail()" class="alert alert-danger">
-            Email is not valid.
-        </div>
-        <label>Password</label>
-        <input placeholder="Enter your password" value="" name="mdp" type="password" [(ngModel)]="responsable.mdp" required>
-        <button color="primary" [disabled]="!responsable.isValid1()" (click)="submit()">Submit</button>
-        <span *ngIf="show"> Login ou mot de passe eronée</span>
-      </form>
+<div>
+  <h5><u><i>Login pour Responsable</i></u></h5>
+  <form class="example-form">
+    <label>Email</label>
+    <input placeholder="Entrez votre email" name="email" [(ngModel)]="responsable.email" required
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+    <div *ngIf="!responsable.isValidMail()" class="alert alert-danger">
+      Email is not valid.
     </div>
- 
-  
+    <label>Password</label>
+    <input placeholder="Enter your password" value="" name="mdp" type="password" [(ngModel)]="responsable.mdp" required>
+    <button color="primary" [disabled]="!responsable.isValid1()" (click)="submit()">Submit</button>
+    <span *ngIf="show"> Login ou mot de passe eronée</span>
+  </form>
+  <a [routerLink]="['/loginClient']">Client </a>
+</div>
