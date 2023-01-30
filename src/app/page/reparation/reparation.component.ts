@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';  
+import { Component, Input, OnInit } from '@angular/core';  
 import { ClientComponent } from '../client/client.component';
 import { ReparationService } from '../../service'; 
 import { Payement, Reparation } from 'src/app/entity';
@@ -12,7 +12,7 @@ import { PayementService } from 'src/app/service/payement.service';
   styleUrls: ['./reparation.component.scss']
 })
 export class ReparationComponent implements OnInit {
-
+  @Input() readonly:boolean=false;
   reparation:Array<any>=new Array();
   clientId:string;
   showModal:any=false;
