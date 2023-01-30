@@ -6,41 +6,44 @@
       <button [routerLink]="'save'" nz-button nzType="primary">save</button>
   </div>
 </div> -->
-<nz-table #middleTable  nzSize="middle" [nzData]="reparation" [nzScroll]="{ x: '1150px'}"    [var]="null" #m="var" >
+<nz-table #middleTable  nzSize="middle" [nzData]="reparation" [nzScroll]="{ x: readonly?'600px':'1150px'}"    [var]="null" #m="var" >
     <thead>
       <tr>
-        <th [nzWidth]="'200px'"><b>VOITURE</b> </th>   
-        <th [nzWidth]="'200px'"><b>START DATE</b> </th>  
-        <th [nzWidth]="'200px'"><b>END DATE</b> </th>  
-        <th [nzWidth]="'200px'"><b>AVANCEMENT</b> </th>  
-        <th [nzWidth]="'200px'"><b>COST</b> </th>  
-        <th [nzWidth]="'200px'"><b>DESCRIPTION</b> </th>  
-        <th [nzWidth]="'200px'"><b>STATUS</b> </th>    
-        <th [nzWidth]="'200px'" [nzRight]="true"><b>PAYEMENT</b> </th>  
-        <th [nzWidth]="'200px'" [nzRight]="true"><b>ACTION</b> </th>  
+        <th [nzWidth]="  readonly?'50px':'200px'"><b>VOITURE</b> </th>   
+        <th *ngIf="!readonly" [nzWidth]="  readonly?'50px':'200px'"><b>START DATE</b> </th>  
+        <th *ngIf="!readonly" [nzWidth]="  readonly?'50px':'200px'"><b>END DATE</b> </th>  
+        <th [nzWidth]="  readonly?'50px':'200px'"><b>AVANCEMENT</b> </th>  
+        <th *ngIf="!readonly" [nzWidth]="  readonly?'50px':'200px'"><b>COST</b> </th>  
+        <th *ngIf="!readonly" [nzWidth]="  readonly?'50px':'200px'"><b>DESCRIPTION</b> </th>  
+        <th *ngIf="!readonly" [nzWidth]="  readonly?'50px':'200px'"><b>STATUS</b> </th>    
+        <th [nzWidth]="  readonly?'50px':'200px'" [nzRight]="true"><b>PAYEMENT</b> </th>  
+        <th [nzWidth]="  readonly?'50px':'200px'" [nzRight]="true"><b>ACTION</b> </th>  
       </tr>
     </thead>
     <tbody  >
       <tr *ngFor="let data of middleTable.data"> 
-        <td><i class="bi bi-car-front-fill me-3"></i> {{ data.voiture.numero }}</td> 
-        <td>{{ data.startDate |date:"dd/MM/yyyy" }}</td> 
-        <td>{{ data.endDate|date:"dd/MM/yyyy" }}</td> 
-        <td>{{ data.avancement }}</td> 
-        <td>{{ data.cost }}</td> 
-        <td>{{ data.description }}</td>  
-        <td>{{ data.status }}</td>  
+        <td>
+          <i class="bi bi-car-front-fill me-3 p-2 round-bi" [style]="{background:data.payement?'#ff787552':'#52c41a2b'}"></i> 
+          {{ data.voiture.numero }}
+        </td> 
+        <td *ngIf="!readonly">{{ data.startDate |date:"dd / MM / yyyy" }}</td> 
+        <td *ngIf="!readonly">{{ data.endDate|date:"dd / MM / yyyy" }}</td> 
+        <td><nz-rate [ngModel]="data.avancement/20" nzAllowHalf nzDisabled></nz-rate></td> 
+        <td *ngIf="!readonly">{{ data.cost }}</td> 
+        <td *ngIf="!readonly">{{ data.description }}</td>  
+        <td *ngIf="!readonly">{{ data.status }}</td>  
         
         <td [nzRight]="true" *ngIf="!data.payement">
           <button (click)="this.showModal=true;m.var=newPayement(data)" nz-button nzType="primary">PAYER</button>
         </td>  
         <td [nzRight]="true" *ngIf="data.payement">
-          Le {{data.payement.datePayement|date:"dd/MM/yyyy"}}
+          Le {{data.payement.datePayement|date:"dd / MM / yyyy"}}
         </td>  
         
         <td [nzRight]="true">
-            <i (click)="deleteReparation(data)" class="mx-2 bi bi-trash-fill"></i> 
-            <i [routerLink]="['/client/reparation',data.id,'edit']" class="mx-2 bi bi-pencil-fill"></i>
-            <i [routerLink]="['/client/reparation',data.id,'detail']" class="mx-2 bi bi-eye-fill"></i>
+          <i [routerLink]="['/client/reparation',data.id,'detail']" class="mx-2 bi bi-eye-fill"></i>
+          <i [routerLink]="['/client/reparation',data.id,'edit']" class="mx-2 bi bi-pencil-fill"></i>
+          <i (click)="deleteReparation(data)" class="mx-2 bi bi-trash-fill"></i> 
         </td> 
 
       </tr>
